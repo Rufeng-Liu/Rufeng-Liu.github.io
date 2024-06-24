@@ -8,7 +8,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>OSB 436, Department of Statistics</p>
+    <p>OSB 436</p>
+    <p>Department of Statistics</p>
     <p>Florida State University</p>
     <p>Tallahassee, FL 32306</p>
 
