@@ -10,7 +10,7 @@ Here are some details during modification of the template.
 
 ---
 
-Information in the 'about' page was changed, together with the profile picture. 'News' section was modified. 'Self-study blog' page was on the way. You can easily contact me via given social media. 'CV' and 'teaching' pages were made as user-friendly ad I can, while publications are waiting for further preprints and papers. Here we also have some deleted pages.
+Information in the 'about' page was changed, together with the profile picture. 'News' section was modified. 'Self-study blog' page was on the way. You can easily contact me via given social media. 'CV' and 'teaching' pages were made as user-friendly as I can, while publications are waiting for further preprints and papers. Here we also have some deleted pages.
 
 #### Deleted pages
 
