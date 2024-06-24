@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The first self-study blog was post. :smile:
+The first self-study blog was post. 
