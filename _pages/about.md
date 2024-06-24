@@ -17,7 +17,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am a PhD candidate in the [Department of Statistics](https://stat.fsu.edu/) at Florida State University.
+I am a PhD candidate in the [Department of Statistics](https://stat.fsu.edu/) at Florida State University. I am now advised by Professors [Andrés Felipe Barrientos](https://anfebar.github.io/). 
 
 My research interests include nonparametric Bayesian inference, Bayesian variable/model selection, and statistical computing.
 
