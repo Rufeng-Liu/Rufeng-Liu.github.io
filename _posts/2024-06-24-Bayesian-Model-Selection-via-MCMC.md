@@ -36,15 +36,10 @@ _styles: >
 
 ## Method
 
-This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
-You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
-If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
-
-To use display mode, again surround your expression with `$$` and place it as a separate paragraph.
-Here is an example:
+Choose between $$K$$ models with corresponding parameter vector $$\boldsymbol{\theta}_j$$, $$j=1,...K$$.
 
 $$
-p(y \mid M=j)=\int f(y\mid \theta,M=j)p(\theta\mid M=j)d\theta=\int f(y\mid \theta_{j},M=j)p(\theta_{j}\mid M=j)d\theta_{j}
+p(y \mid M=j)=\int f(y\mid \boldsymbol{\theta},M=j)p(\boldsymbol{\theta}\mid M=j)d\boldsymbol{\theta}=\int f(y\mid \boldsymbol{\theta}_{j},M=j)p(\boldsymbol{\theta}_{j}\mid M=j)d\boldsymbol{\theta}
 $$
 --- 
 ## Implementaton
