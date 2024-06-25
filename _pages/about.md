@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 
 I am a PhD candidate in the [Department of Statistics](https://stat.fsu.edu/) at Florida State University. 
 
-
+My advisor is Professor [Andrés Felipe Barrientos](https://anfebar.github.io/). 
 
 My research interests include nonparametric Bayesian inference, Bayesian variable/model selection, and statistical computing.
 
