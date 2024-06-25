@@ -1,0 +1,14 @@
+---
+layout: distill
+title: Spike and Slab priors
+description: Spike and Slab priors for Bayesian model/variable selection
+tags: Bayesian model/variable selection
+giscus_comments: true
+date: 2024-06-24
+featured: true
+
+authors:
+  - name: Rufeng Liu
+    affiliations:
+      name: FSU
+
