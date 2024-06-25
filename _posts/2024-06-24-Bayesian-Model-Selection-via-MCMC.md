@@ -7,7 +7,7 @@ giscus_comments: false
 date: 2024-06-24
 featured: true
 
-# bibliography: 1995-Carlin.bib
+bibliography: 1995-Carlin.bib
 
 toc:
   - name: Method
