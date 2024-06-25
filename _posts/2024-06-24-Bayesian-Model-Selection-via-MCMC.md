@@ -46,4 +46,4 @@ Here is an example:
 $$
 p(y \mid M=j)=\int f(y\mid \theta,M=j)p(\theta\mid M=j)d\theta=\int f(y\mid \theta_{j},M=j)p(\theta_{j}\mid M=j)d\theta_{j}
 $$
-  
+--- 
