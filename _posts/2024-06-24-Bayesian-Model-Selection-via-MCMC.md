@@ -7,11 +7,6 @@ giscus_comments: true
 date: 2024-06-24
 featured: true
 
-authors:
-  - name: Rufeng Liu
-    affiliations:
-      name: FSU
-
 bibliography: 1995-Carlin.bib
 
 toc:
