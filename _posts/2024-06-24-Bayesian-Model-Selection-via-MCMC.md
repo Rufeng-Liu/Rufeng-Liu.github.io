@@ -37,12 +37,14 @@ _styles: >
 ## Method
 
 Choose between $$K$$ models with corresponding parameter vector $$\boldsymbol{\theta}_j$$, $$j=1,...K$$. Let $$M$$ be an integer-valued parameter that indexes the model, for model $$j$$, we have a likelihood $$f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)$$ and a prior $$p(\boldsymbol{\theta}_j\mid M=j)$$. Given $$M=j$$, $$\boldsymbol.{y}$$ is independent of $$\{\boldsymbol{i\neq j}\}$$. Assume that given the indicator $$M$$, $$\boldsymbol{\theta}_j$$ are independent of each other, we can complete the Bayesian model specification by choosing proper `pseudopriors` $$p(\boldsymbol{\theta}_j\mid M\neq j)$$, which is a conveniently chosen linking density. Reason shows below,
-
 $$
 p(\boldsymbol{y} \mid M=j)=\int f(\boldsymbol{y}\mid \boldsymbol{\theta},M=j)p(\boldsymbol{\theta}\mid M=j)d\boldsymbol{\theta}=\int f(\boldsymbol{y}\mid \boldsymbol{\theta}_{j},M=j)p(\boldsymbol{\theta}_{j}\mid M=j)d\boldsymbol{\theta}
 $$
-
-Given prior model probabilities $$\pi\equiv P(M=j)$$ such that $$\sum_{j=1}^{K}\pi_{j}=1$$, let $$\boldsymbol{\theta}=\{\boldsymbol{\theta}_1,\ldots,\boldsymbol{\theta}_K\}$$, 
+Given prior model probabilities $$\pi\equiv P(M=j)$$ such that $$\sum_{j=1}^{K}\pi_{j}=1$$, let $$\boldsymbol{\theta}=\{\boldsymbol{\theta}_1,\ldots,\boldsymbol{\theta}_K\}$$, when $$M=j$$, the joint distribution of $$\boldsymbol{y}$$ and $$\boldsymbol{\theta} is 
+$$
+p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j)
+=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)p(\boldsymbol{\theta},M=j)p(M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)\prod_{i=1}^{K}p(\boldsymbol{\theta}_j,M=j)p(M=j)
+$$
 
 --- 
 ## Implementaton
