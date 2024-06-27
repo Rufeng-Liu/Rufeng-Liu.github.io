@@ -40,14 +40,14 @@ Choose between $$K$$ models with corresponding parameter vector $$\boldsymbol{\t
 $$
 p(\boldsymbol{y} \mid M=j)=\int f(\boldsymbol{y}\mid \boldsymbol{\theta},M=j)p(\boldsymbol{\theta}\mid M=j)d\boldsymbol{\theta}=\int f(\boldsymbol{y}\mid \boldsymbol{\theta}_{j},M=j)p(\boldsymbol{\theta}_{j}\mid M=j)d\boldsymbol{\theta}
 $$
-Given prior model probabilities $$\pi\equiv P(M=j)$$ such that $$\sum_{j=1}^{K}\pi_{j}=1$$, let $$\boldsymbol{\theta}=\{\boldsymbol{\theta}_1,\ldots,\boldsymbol{\theta}_K\}$$, when $$M=j$$, the joint distribution of $$\boldsymbol{y}$$ and $$\boldsymbol{\theta}$$ is 
+Given prior model probabilities $$\pi_{j}\equiv P(M=j)$$ such that $$\sum_{j=1}^{K}\pi_{j}=1$$, let $$\boldsymbol{\theta}=\{\boldsymbol{\theta}_1,\ldots,\boldsymbol{\theta}_K\}$$, when $$M=j$$, the joint distribution of $$\boldsymbol{y}$$ and $$\boldsymbol{\theta}$$ is 
 
 $$
 \begin{aligned} 
 p(\boldsymbol{y},\boldsymbol{\theta},M=j) & = f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j) \\
  & = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)p(\boldsymbol{\theta},M=j)p(M=j) \\
  & = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j) \prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j) p(M=j)\\
- & = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j) \prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j) \pi
+ & = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j) \prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j) \pi_{j}
 \end{aligned}
 $$
 
