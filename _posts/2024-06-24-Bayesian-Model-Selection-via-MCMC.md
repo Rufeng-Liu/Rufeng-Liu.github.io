@@ -50,13 +50,15 @@ p(\boldsymbol{y},\boldsymbol{\theta},M=j) & = f(\boldsymbol{y}\mid \boldsymbol{\
  & = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j) \prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j) \pi_{j}
 \end{aligned}
 $$
-
+To implement Gibbs sampler the full conditional distributions of each $$\boldsymbol{\theta}_j$$ and $$M$$.
+For $$\boldsymbol{\theta}_j$$:
 $$
-x = \begin{cases}
-   a &\text{if } b \\
-   c &\text{if } d
+p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_({i\neq j},M,\boldsymbol{y}) = \begin{cases}
+   f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)p(\boldsymbol{\theta}_j\mid M = j) & M=j, \\
+   p(\boldsymbol{\theta}_j\mid M\neq j) & M\neq j,
 \end{cases}
 $$
+For $$M$$:
 
 --- 
 ## Implementaton
