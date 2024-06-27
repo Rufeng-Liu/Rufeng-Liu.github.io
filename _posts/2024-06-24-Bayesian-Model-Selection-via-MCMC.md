@@ -60,9 +60,16 @@ p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_({i\neq j},M,\boldsymbol{y}) = 
 \end{cases}
 $$
 
-For $$M$$:
+For discrete finite parameter $$M$$:
+
 $$
   p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})=\frac{f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=j) \pi_j}{\sum_{k=1}^{K} \left(f(\boldsymbol{y}\mid \boldsymbol{\theta}_k,M=k)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=k) \pi_k \right)}
+$$
+
+The algorithm will produce samples from the correct joint posterior distribution. The ratio
+
+$$
+\hat{p}(M=j\mid \boldsymbol{y})=\frac{\text{number of }M^{(g)=j}}{\text{total number of }M^{(g)}},\quad j=1,\ldots,K.
 $$
 
 --- 
