@@ -50,12 +50,14 @@ p(\boldsymbol{y},\boldsymbol{\theta},M=j) & = f(\boldsymbol{y}\mid \boldsymbol{\
  & = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j) \prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j) \pi_{j}
 \end{aligned}
 $$
+
 $$
 x = \begin{cases}
    a &\text{if } b \\
    c &\text{if } d
 \end{cases}
 $$
+
 --- 
 ## Implementaton
 
