@@ -47,7 +47,7 @@ p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\thet
 \end{equation}
 
 \begin{equation}
-p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j)
+p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)p(\boldsymbol{\theta},M=j)p(M=j)
 \end{equation}
 
 --- 
