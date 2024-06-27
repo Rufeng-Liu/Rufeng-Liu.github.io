@@ -48,6 +48,10 @@ p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\thet
 =f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)\prod_{i=1}^{K}p(\boldsymbol{\theta}_j,M=j)p(M=j)
 \end{equation}
 
+\begin{equation}
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+\end{equation}
+
 --- 
 ## Implementaton
 
