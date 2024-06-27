@@ -43,11 +43,11 @@ $$
 Given prior model probabilities $$\pi\equiv P(M=j)$$ such that $$\sum_{j=1}^{K}\pi_{j}=1$$, let $$\boldsymbol{\theta}=\{\boldsymbol{\theta}_1,\ldots,\boldsymbol{\theta}_K\}$$, when $$M=j$$, the joint distribution of $$\boldsymbol{y}$$ and $$\boldsymbol{\theta}$$ is 
 
 \begin{eqnarray}
-=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)p(\boldsymbol{\theta},M=j)p(M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j)p(M=j)
+=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j)p(M=j)
 \end{eqnarray}
 
 \begin{eqnarray}
-p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j)
+p(\boldsymbol{y},\boldsymbol{\theta},M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j)=f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)p(\boldsymbol{\theta},M=j)p(M=j)
 \end{eqnarray}
 
 --- 
