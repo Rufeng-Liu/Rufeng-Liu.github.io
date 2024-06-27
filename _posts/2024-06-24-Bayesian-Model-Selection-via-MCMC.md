@@ -72,6 +72,14 @@ $$
 \hat{p}(M=j\mid \boldsymbol{y})=\frac{\text{number of }M^{(g)=j}}{\text{total number of }M^{(g)}},\quad j=1,\ldots,K.
 $$
 
+provides estimates that be used to compute the Bayes factor (ratio of the observed marginal densities for the two models)
+
+$$
+B_{ij}=\frac{p(\boldsymbol{y}\mid M=i)}{p(\boldsymbol{y}\mid M=j)}
+$$
+
+between any two of the models.
+
 --- 
 ## Implementaton
 
