@@ -50,9 +50,14 @@ p(\boldsymbol{y},\boldsymbol{\theta},M=j) & = f(\boldsymbol{y}\mid \boldsymbol{\
 \end{aligned}
 $$
 
-\begin{eqnarray*}
-p(\boldsymbol{y},\boldsymbol{\theta},M=j) = f(\boldsymbol{y}\mid \boldsymbol{\theta},m=j)p(\boldsymbol{\theta},M=j)p(M=j) = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)p(\boldsymbol{\theta},M=j)p(M=j) = f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,m=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_j,M=j)p(M=j)
-\end{eqnarray*}
+\begin{equation}
+  D_{it} =
+    \begin{cases}
+      1 & \text{if bank $i$ issues ABs at time $t$}\\
+      2 & \text{if bank $i$ issues CBs at time $t$}\\
+      0 & \text{otherwise}
+    \end{cases}       
+\end{equation}
 
 --- 
 ## Implementaton
