@@ -61,6 +61,9 @@ p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_({i\neq j},M,\boldsymbol{y}) = 
 $$
 
 For $$M$$:
+$$
+  p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})=\frac{f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=j) \pi_j}{\sum_{k=1}^{K} \left(f(\boldsymbol{y}\mid \boldsymbol{\theta}_k,M=k)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=k) \pi_k \right)}
+$$
 
 --- 
 ## Implementaton
