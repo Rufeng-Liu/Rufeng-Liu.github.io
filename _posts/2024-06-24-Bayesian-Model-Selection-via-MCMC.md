@@ -55,7 +55,7 @@ To implement Gibbs sampler the full conditional distributions of each $$\boldsym
 For $$\boldsymbol{\theta}_j$$, when $$M=j$$, we generate from the usual model $$j$$ full conditional; when $$M\neq j$$, we generate from the linking function (`pseudoprior`).
 
 $$
-p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_({i\neq j},M,\boldsymbol{y}) = \begin{cases}
+p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_{i\neq j},M,\boldsymbol{y}) = \begin{cases}
    f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)p(\boldsymbol{\theta}_j\mid M = j) & M=j, \\
    p(\boldsymbol{\theta}_j\mid M\neq j) & M\neq j,
 \end{cases}
@@ -64,7 +64,7 @@ $$
 For discrete finite parameter $$M$$:
 
 $$
-  p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})=\frac{f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=j) \pi_j}{\sum_{k=1}^{K} \left(f(\boldsymbol{y}\mid \boldsymbol{\theta}_k,M=k)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=k) \pi_k \right)}
+p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})=\frac{f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=j) \pi_j}{\sum_{k=1}^{K} \left(f(\boldsymbol{y}\mid \boldsymbol{\theta}_k,M=k)\prod_{i=1}^{K} p(\boldsymbol{\theta}_i\mid M=k) \pi_k \right)}
 $$
 
 The algorithm will produce samples from the correct joint posterior distribution. The ratio
