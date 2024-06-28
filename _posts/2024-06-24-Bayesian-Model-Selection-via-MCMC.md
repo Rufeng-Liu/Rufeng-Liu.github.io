@@ -82,7 +82,7 @@ $$
 between any two of the models.
 
 --- 
-## Implementaton
+## Implementaton <d-cite key="carlin1995bayesian"></d-cite> <d-cite key="jauch2021mixture"></d-cite>
 
 Poor choices of the linking density (`pseudopriors`) $$p(\boldsymbol{\theta}_j\mid M\neq j)$$ will make jumps between models extremely unlikely, so that the convergence of the Gibbs sampling may trapped to one model, which might not be the true one in fact. Good choices will produce $$boldsymbol{\theta}_j^{(g)}$$-values that are consistent with the data, so that $$p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})$$ will still be reasonably large at the next $$M$$ update step. 
 
