@@ -70,7 +70,7 @@ $$
 The algorithm will produce samples from the correct joint posterior distribution. The ratio
 
 $$
-\hat{p}(M=j\mid \boldsymbol{y})=\frac{\text{number of }M^{(g)=j}}{\text{total number of }M^{(g)}},\quad j=1,\ldots,K.
+\hat{p}(M=j\mid \boldsymbol{y})=\frac{\text{number of }M^{(g)}=j}{\text{total number of }M^{(g)}},\quad j=1,\ldots,K.
 $$
 
 provides estimates that be used to compute the Bayes factor (ratio of the observed marginal densities for the two models)
