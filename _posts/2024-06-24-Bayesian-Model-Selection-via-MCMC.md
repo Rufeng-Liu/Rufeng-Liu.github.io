@@ -53,6 +53,7 @@ $$
 
 To implement Gibbs sampler the full conditional distributions of each $$\boldsymbol{\theta}_j$$ and $$M$$.
 For $$\boldsymbol{\theta}_j$$, when $$M=j$$, we generate from the usual model $$j$$ full conditional; when $$M\neq j$$, we generate from the linking function (`pseudoprior`).
+
 $$
 p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_({i\neq j},M,\boldsymbol{y}) = \begin{cases}
    f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)p(\boldsymbol{\theta}_j\mid M = j) & M=j, \\
@@ -82,5 +83,11 @@ between any two of the models.
 
 --- 
 ## Implementaton
+
+Poor choices of the linking density (`pseudopriors`) $$p(\boldsymbol{\theta}_j\mid M\neq j)$$ will make jumps between models extremely unlikely, so that the convergence of the Gibbs sampling may trapped to one model, which might not be the true one in fact. Good choices will produce $$boldsymbol{\theta}_j^{(g)}$$-values that are consistent with the data, so that $$p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})$$ will still be reasonably large at the next $$M$$ update step. 
+
+Key point: Use the data to help to select the `pseudopriors` but `not` the prior, match the `pseudopriors` as nearly as possible to the true model-specific posteriors. 
+
+
 
 ---
