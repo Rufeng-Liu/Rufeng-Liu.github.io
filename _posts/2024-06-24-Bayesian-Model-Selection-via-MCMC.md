@@ -57,7 +57,7 @@ To implement Gibbs sampler the full conditional distributions of each $$\boldsym
 For $$\boldsymbol{\theta}_j$$, when $$M=j$$, we generate from the usual model $$j$$ full conditional; when $$M\neq j$$, we generate from the linking function (`pseudoprior`).
 
 $$
-p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_{i\neq j},M,\boldsymbol{y}) \prop \begin{cases}
+p(\boldsymbol{\theta}_j \mid \boldsymbol{\theta}_{i\neq j},M,\boldsymbol{y}) \propto \begin{cases}
    f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)p(\boldsymbol{\theta}_j\mid M = j) & M=j, \\
    p(\boldsymbol{\theta}_j\mid M\neq j) & M\neq j,
 \end{cases}
