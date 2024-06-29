@@ -78,7 +78,7 @@ $$
 provides estimates that be used to compute the Bayes factor (ratio of the observed marginal densities for the two models)
 
 $$
-B_{ij}=\frac{p(\boldsymbol{y}\mid M=i)}{p(\boldsymbol{y}\mid M=j)}
+B_{ji}=\frac{p(\boldsymbol{y}\mid M=j)}{p(\boldsymbol{y}\mid M=i)}
 $$
 
 between any two of the models.
