@@ -88,6 +88,8 @@ between any two of the models.
 
 Poor choices of the linking density (`pseudopriors`) $$p(\boldsymbol{\theta}_j\mid M\neq j)$$ will make jumps between models extremely unlikely, so that the convergence of the Gibbs sampling may trapped to one model, which might not be the true one in fact. Good choices will produce $$\boldsymbol{\theta}_j^{(g)}$$-values that are consistent with the data, so that $$p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})$$ will still be reasonably large at the next $$M$$ update step. 
 
+If for a particular data set one of the $$p(M=j\mid \boldsymbol{y})$$ is extremely large, the $$\pi_j$$ may be adjusted to correct the imbalance during the early stage of the algorithm, so that the final value of $$B_{ji}$$ reflect the true odds in favour of $$M=j$$ suggested by the data.
+
 Key point: Use the data to help to select the `pseudopriors` but `not` the prior, match the `pseudopriors` as nearly as possible to the true model-specific posteriors. 
 
 
