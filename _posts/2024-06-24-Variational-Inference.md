@@ -33,4 +33,9 @@ _styles: >
     font-size: 16px;
   }
 ---
+First posit a family of densities, then to find a member of that family which is close to the target density. 
+## Inference
 
+
+
+---
