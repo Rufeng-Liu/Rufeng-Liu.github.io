@@ -34,10 +34,10 @@ _styles: >
     font-size: 16px;
   }
 ---
-First posit a family of densities, then to find a member of that family which is close to the target density. 
+First posit a family of densities, then to find a member of that family which is close to the target density. Use exponential family as an example.
 
 ## Preliminary
-[Exponential family:](https://en.wikipedia.org/wiki/Exponential_family)
+[Exponential families](https://en.wikipedia.org/wiki/Exponential_family) include [normal](https://en.wikipedia.org/wiki/Normal_distribution),[exponential](https://en.wikipedia.org/wiki/Exponential_distribution),[gamma](https://en.wikipedia.org/wiki/Gamma_distribution),[chi-squared](https://en.wikipedia.org/wiki/Chi-squared_distribution),[beta](https://en.wikipedia.org/wiki/Beta_distribution),[Dirichlet](https://en.wikipedia.org/wiki/Dirichlet_distribution),[Bernoulli](https://en.wikipedia.org/wiki/Bernoulli_distribution),[categorical](https://en.wikipedia.org/wiki/Categorical_distribution),[Poisson](https://en.wikipedia.org/wiki/Poisson_distribution),[Wishart](https://en.wikipedia.org/wiki/Wishart_distribution),[inverse Wishart](https://en.wikipedia.org/wiki/Inverse-Wishart_distribution),[geometric](https://en.wikipedia.org/wiki/Geometric_distribution),[binomial](https://en.wikipedia.org/wiki/Binomial_distribution) (with fixed number of failures),[multinomial](https://en.wikipedia.org/wiki/Multinomial_distribution) (with fixed number of failures),[negative binomial](https://en.wikipedia.org/wiki/Negative_binomial_distribution) (with fixed number of failures).
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
