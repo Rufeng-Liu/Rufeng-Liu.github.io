@@ -10,6 +10,7 @@ featured: true
 bibliography: 2024-06-24-Variational-Inference.bib
 
 toc:
+  - name: Preliminary
   - name: Inference
     # if a section has subsections, you can add them as follows:
     # subsections:
@@ -34,7 +35,11 @@ _styles: >
   }
 ---
 First posit a family of densities, then to find a member of that family which is close to the target density. 
-## Inference
+
+## Preliminary
+[Exponential family:](https://en.wikipedia.org/wiki/Exponential_family)
+
+## Inference <d-cite key="blei2017variational"></d-cite>
 
 
 
