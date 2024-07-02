@@ -34,6 +34,7 @@ _styles: >
     font-size: 16px;
   }
 ---
+Use optimization rather than use sampling. 
 First posit a family of densities, then to find a member of that family which is close to the target density. Use exponential family as an example.
 
 ## Preliminary
