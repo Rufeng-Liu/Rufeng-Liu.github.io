@@ -42,8 +42,17 @@ First posit a family of densities, then to find a member of that family which is
 For variable $$\boldsymbol{x}=(x_1,\ldots,x_k)^{T}$$, a family of distributions with paramter $$\boldsymbol{\theta}\equiv (\theta_1,\ldots,\theta_s)^{T}$$ is said to belong to an exponential family if the p.d.f (or p.m.f) can be written as
 
 $$
+f_X(\boldsymbol{X}\mid\boldsymbol{\theta})=h(\boldsymbol{x})exp\left(\sum_{i=1}^{s} \eta_{i}(\boldsymbol{\theta})T_i(\boldsymbol{x})-A(\boldsymbol{\theta})\right)
+$$
+
+or campactly 
 
 $$
+f_X(\boldsymbol{X}\mid\boldsymbol{\theta})=h(\boldsymbol{x})exp\left(\boldsymbol{\eta}(\boldsymbol{\theta})\cdot T(\boldsymbol{x})-A(\boldsymbol{\theta})\right)
+$$
+
+The dimensions $$k$$ of the random variable need not match the dimension $$d$$ of the parameter vector, nor (in the case of a curved exponential function) the dimension $$s$$ of the natural parameter 
+$$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
