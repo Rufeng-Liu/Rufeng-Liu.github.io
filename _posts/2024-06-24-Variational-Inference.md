@@ -16,7 +16,7 @@ toc:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Implementaton
+  - name: Implementation
 
 _styles: >
   .fake-img {
@@ -57,6 +57,6 @@ $$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
-
+## Implementation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
 ---
