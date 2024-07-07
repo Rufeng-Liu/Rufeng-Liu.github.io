@@ -1,8 +1,8 @@
 ---
 layout: distill
-title: Variational Inference
-description: Variational Bayesian
-tags: Optimization, Variational
+title: Jackknife, Bootstrap and Bayesian Bootstrap
+description: Bootstrap
+tags: Resampling
 giscus_comments: false
 date: 2024-07-06
 featured: true
@@ -34,12 +34,16 @@ _styles: >
     font-size: 16px;
   }
 ---
-Use optimization rather than use sampling. 
-First posit a family of densities, then to find a member of that family which is close to the target density. Use exponential family as an example.
+Ways of resampling, comparison of Jackknife, Bootstrap and Bayesian Bootstrap.
 
 ## Jackknife <d-cite key="miller1974jackknife"></d-cite>
+Given a sample of size $$n$$, a [jackknife estimator](https://en.wikipedia.org/wiki/Jackknife_resampling) can be built by aggregating the parameter estimates from each subsample of size $$(n-1)$$ obtained by omitting one observation.
+
+Useful for bias and variance estimation, a linear approximation of the bootstrap.
 
 ## Bootstrap <d-cite key="efron1992bootstrap"></d-cite>
+
+A generalization of the jackknife, 
 
 ## Bayesian Bootstrap <d-cite key="rubin1981bayesian"></d-cite>
 
