@@ -2,7 +2,7 @@
 layout: distill
 title: Variational Inference
 description: Variational Bayesian
-tags: Optimization, Variational
+tags: Optimization Variational
 giscus_comments: false
 date: 2024-06-28
 featured: true
