@@ -2,7 +2,7 @@
 layout: distill
 title: Bayesian Model Selection via MCMC
 description: Bayesian model selection
-tags: Bayesian model/variable selection
+tags: Bayesian-model/variable-selection
 giscus_comments: false
 date: 2024-06-24
 featured: true
