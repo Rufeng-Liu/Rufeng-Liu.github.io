@@ -7,7 +7,7 @@ giscus_comments: false
 date: 2024-06-28
 featured: true
 
-bibliography: 2024-06-24-Variational-Inference.bib
+bibliography: 2024-06-28-Variational-Inference.bib
 
 toc:
   - name: Preliminary
