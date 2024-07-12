@@ -67,7 +67,11 @@ G\mid G_0,\alpha &\sim \text{DP}(G_0,\alpha)\\
 \end{aligned}
 $$
 
-Given Dirichlet process $$G$$,
+Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
+
+$$
+x_n\mid\eta_n, G\overset{ind}{\sim}p(\cdot;\eta_n), \quad \eta_n\mid G\overset{i.i.d}{\sim}G \quad G\mid G_0,\alpha &\sim \text{DP}(G_0,\alpha)
+$$
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
