@@ -58,8 +58,16 @@ $$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
 ## Dirichlet process and Dirichlet process mixture <d-cite key="ferguson1973bayesian"></d-cite>
 
-A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$. The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used.
+A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$. The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
 
+$$
+\begin{aligned} 
+G\mid G_0,\alpha &\sim \text{DP}(G_0,\alpha)\\
+\eta_n &\sim G, \quad n\in\{1,\ldots,N\}.
+\end{aligned}
+$$
+
+Given Dirichlet process $$G$$,
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
