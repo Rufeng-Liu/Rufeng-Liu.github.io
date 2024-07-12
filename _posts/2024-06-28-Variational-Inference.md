@@ -11,7 +11,7 @@ bibliography: 2024-06-28-Variational-Inference.bib
 
 toc:
   - name: Exponential families
-  - name: Dirichlet process
+  - name: Dirichlet process and Dirichlet process mixture
   - name: Inference
     # if a section has subsections, you can add them as follows:
     # subsections:
@@ -56,9 +56,10 @@ $$
 The dimensions $$k$$ of the random variable need not match the dimension $$d$$ of the parameter vector, nor (in the case of a curved exponential function) the dimension $$s$$ of the natural parameter 
 $$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
-## Dirichlet process <d-cite key="ferguson1973bayesian"></d-cite>
+## Dirichlet process and Dirichlet process mixture <d-cite key="ferguson1973bayesian"></d-cite>
 
-A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$. 
+A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$. The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used.
+
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
