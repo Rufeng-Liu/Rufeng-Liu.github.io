@@ -10,8 +10,8 @@ featured: true
 bibliography: 2024-07-09-Horseshoe-estimator.bib
 
 toc:
-  - name: Horseshoe <d-cite key="carvalho2010horseshoe"></d-cite>
-  - name: Properties <d-cite key="carvalho2010horseshoe"></d-cite>
+  - name: Horseshoe 
+  - name: Properties 
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
@@ -36,9 +36,9 @@ _styles: >
 ---
 Introduction to Horseshoe estimator/prior, comparison versus other priors like spike-and-slab.
 
-## Horseshoe <d-cite key="carvalho2010horseshoe"></d-cite>
-
-## Properties <d-cite key="carvalho2010horseshoe"></d-cite>
+## Horseshoe 
+Citation <d-cite key="carvalho2010horseshoe"></d-cite>
+## Properties
 
 
 
