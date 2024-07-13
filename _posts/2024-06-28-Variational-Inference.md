@@ -70,8 +70,15 @@ $$
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
 $$
-x_n\mid\eta_n,G\overset{ind}{\sim}p_n(\cdot;\eta_n), \quad \eta_n\mid G\overset{i.i.d}{\sim}G \quad G\mid G_0,\alpha \sim \text{DP}(G_0,\alpha)
+x_n\mid\eta_n,G\overset{ind}{\sim}p_n(\cdot;\eta_n), \quad \eta_n\mid G\overset{i.i.d}{\sim}G, \quad G\mid G_0,\alpha \sim \text{DP}(G_0,\alpha)
 $$
+
+Given a sample $$\{x_1,\ldots,x_N\}$$ from a DP mixture, the predictive density is
+
+$$
+p(x\mid x_1,\ldots,x_N,\alpha,G_0)=\int p(x\mid \eta)p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)d\eta
+$$
+which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
