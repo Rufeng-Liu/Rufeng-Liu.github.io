@@ -10,13 +10,13 @@ featured: true
 bibliography: 2024-07-06-Jackknife-Bootstrap-BayesianBootstrap.bib
 
 toc:
-  - name: Jackknife
-  - name: Bootstrap
+  - name: Jackknife <d-cite key="miller1974jackknife"></d-cite>
+  - name: Bootstrap <d-cite key="efron1992bootstrap"></d-cite>p
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Bayesian Bootstrap
+  - name: Bayesian Bootstrap <d-cite key="rubin1981bayesian"></d-cite>
 
 _styles: >
   .fake-img {
