@@ -42,7 +42,7 @@ Citation <d-cite key="carvalho2010horseshoe"></d-cite>
 
 
 
-## Comparison <d-cite key="carvalho2010horseshoe"></d-cite>
+## Comparison 
 
 
 ---
