@@ -2,7 +2,7 @@
 layout: distill
 title: Variational Inference
 description: Variational Bayesian
-tags: Optimization Variational
+tags: Optimization Variational Dirichlet-process
 giscus_comments: false
 date: 2024-06-28
 featured: true
@@ -11,13 +11,13 @@ bibliography: 2024-06-28-Variational-Inference.bib
 
 toc:
   - name: Exponential families
-  - name: Dirichlet process and Dirichlet process mixture
-  - name: Inference
+  - name: Dirichlet process and Dirichlet process mixture <d-cite key="ferguson1973bayesian"></d-cite>
+  - name: Inference <d-cite key="blei2017variational"></d-cite>
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Implementation
+  - name: Implementation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
 _styles: >
   .fake-img {
@@ -80,6 +80,8 @@ p(x\mid x_1,\ldots,x_N,\alpha,G_0)=\int p(x\mid \eta)p(\eta\mid x_1,\ldots,x_N,\
 $$
 
 which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
+
+
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
 
