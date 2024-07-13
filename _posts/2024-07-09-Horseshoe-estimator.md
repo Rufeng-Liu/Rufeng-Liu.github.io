@@ -10,8 +10,8 @@ featured: true
 bibliography: 2024-07-09-Horseshoe-estimator.bib
 
 toc:
-  - name: Horseshoe
-  - name: Properties
+  - name: Horseshoe <d-cite key="carvalho2010horseshoe"></d-cite>
+  - name: Properties <d-cite key="carvalho2010horseshoe"></d-cite>
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
