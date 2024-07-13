@@ -78,6 +78,7 @@ Given a sample $$\{x_1,\ldots,x_N\}$$ from a DP mixture, the predictive density 
 $$
 p(x\mid x_1,\ldots,x_N,\alpha,G_0)=\int p(x\mid \eta)p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)d\eta
 $$
+
 which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
 
 ## Inference <d-cite key="blei2017variational"></d-cite>
