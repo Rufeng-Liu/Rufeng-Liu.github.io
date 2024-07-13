@@ -10,14 +10,14 @@ featured: true
 bibliography: 2024-07-06-Jackknife-Bootstrap-BayesianBootstrap.bib
 
 toc:
-  - name: Jackknife <d-cite key="miller1974jackknife"></d-cite>
-  - name: Bootstrap <d-cite key="efron1992bootstrap"></d-cite>p
+  - name: Jackknife 
+  - name: Bootstrap 
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Bayesian Bootstrap <d-cite key="rubin1981bayesian"></d-cite>
-
+  - name: Bayesian Bootstrap
+    
 _styles: >
   .fake-img {
     background: #Bayesian bootstrapb;
@@ -36,12 +36,15 @@ _styles: >
 ---
 Ways of resampling, comparison of Jackknife, Bootstrap and Bayesian Bootstrap.
 
-## Jackknife <d-cite key="miller1974jackknife"></d-cite>
+## Jackknife 
+Citation <d-cite key="miller1974jackknife"></d-cite>
+
 Given a sample of size $$n$$, a [jackknife estimator](https://en.wikipedia.org/wiki/Jackknife_resampling) can be built by aggregating the parameter estimates from each subsample of size $$(n-1)$$ obtained by omitting one observation.
 
 Useful for bias and variance estimation, a linear approximation of the bootstrap.
 
-## Bootstrap <d-cite key="efron1992bootstrap"></d-cite>
+## Bootstrap 
+Citation <d-cite key="efron1992bootstrap"></d-cite>
 
 The [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) works by treating inference of the true probability distribution $$J$$, given the original data, as being analogous to an inference of the empirical distribution $$\hat{J}$$, given the resampled data (using random sampling with replacement). The accuracy of inferences regarding $$\hat{J}$$ using the resampled data can be assessed because we know $$\hat{J}$$. If $$\hat{J}$$ is a reasonable approximation to $$J$$, then the quality of inference on $$J$$ can in turn be inferred.
 
@@ -53,7 +56,8 @@ Pros: straightforward, can be applied to complex sampling designs, control and c
 
 Cons: rely on assumptions (e.g. independence of samples or large enough of a sample size), time-consuming, lead to inconsistency with finite-sample.
 
-## Bayesian Bootstrap <d-cite key="rubin1981bayesian"></d-cite>
+## Bayesian Bootstrap 
+Citation <d-cite key="rubin1981bayesian"></d-cite>
 
 The [Bayesian bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)#Bayesian_bootstrap) is analogous to the bootstrap.
 
