@@ -10,12 +10,12 @@ featured: true
 bibliography: 2024-06-24-Bayesian-Model-Selection-via-MCMC.bib
 
 toc:
-  - name: Method
+  - name: Method <d-cite key="carlin1995bayesian"></d-cite>
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Implementation
+  - name: Implementation <d-cite key="carlin1995bayesian"></d-cite> <d-cite key="jauch2021mixture"></d-cite>
 
 _styles: >
   .fake-img {
