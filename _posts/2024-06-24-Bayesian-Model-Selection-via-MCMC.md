@@ -10,12 +10,12 @@ featured: true
 bibliography: 2024-06-24-Bayesian-Model-Selection-via-MCMC.bib
 
 toc:
-  - name: Method <d-cite key="carlin1995bayesian"></d-cite>
+  - name: Method 
     # if a section has subsections, you can add them as follows:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Implementation <d-cite key="carlin1995bayesian"></d-cite> <d-cite key="jauch2021mixture"></d-cite>
+  - name: Implementation 
 
 _styles: >
   .fake-img {
@@ -34,8 +34,9 @@ _styles: >
   }
 ---
 
-## Method <d-cite key="carlin1995bayesian"></d-cite>
+## Method 
 
+Citation <d-cite key="carlin1995bayesian"></d-cite>. 
 Choose between $$K$$ models with corresponding parameter vector $$\boldsymbol{\theta}_j$$, $$j=1,...K$$. 
 
 Let $$M$$ be an integer-valued parameter that indexes the model, for model $$j$$, we have a likelihood $$f(\boldsymbol{y}\mid \boldsymbol{\theta}_j,M=j)$$ and a prior $$p(\boldsymbol{\theta}_j\mid M=j)$$. Given $$M=j$$, $$\boldsymbol{y}$$ is independent of $$\{\boldsymbol{\theta_{i\neq j}}\}$$. Assume that given the indicator $$M$$, $$\boldsymbol{\theta}_j$$ are independent of each other, we can complete the Bayesian model specification by choosing proper `pseudopriors` $$p(\boldsymbol{\theta}_j\mid M\neq j)$$, which is a conveniently chosen linking density. Reason is shown below, let $$\boldsymbol{\theta}=\{\boldsymbol{\theta}_1,\ldots,\boldsymbol{\theta}_K\}$$,
@@ -84,7 +85,9 @@ $$
 between any two of the models.
 
 --- 
-## Implementation <d-cite key="carlin1995bayesian"></d-cite> <d-cite key="jauch2021mixture"></d-cite>
+## Implementation 
+
+Citation <d-cite key="carlin1995bayesian"></d-cite> <d-cite key="jauch2021mixture"></d-cite>.
 
 Poor choices of the linking density (`pseudopriors`) $$p(\boldsymbol{\theta}_j\mid M\neq j)$$ will make jumps between models extremely unlikely, so that the convergence of the Gibbs sampling may trapped to one model, which might not be the true one in fact. Good choices will produce $$\boldsymbol{\theta}_j^{(g)}$$-values that are consistent with the data, so that $$p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})$$ will still be reasonably large at the next $$M$$ update step. 
 
