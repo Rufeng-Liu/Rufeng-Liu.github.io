@@ -44,7 +44,7 @@ First posit a family of densities, then to find a member of that family which is
 For variable $$\boldsymbol{x}=(x_1,\ldots,x_k)^{T}$$, a family of distributions with paramter $$\boldsymbol{\theta}\equiv (\theta_1,\ldots,\theta_s)^{T}$$ is said to belong to an exponential family if the p.d.f (or p.m.f) can be written as
 
 $$
-f_X(\boldsymbol{X}\mid\boldsymbol{\theta})=h(\boldsymbol{x})exp\left(\sum_{i=1}^{s} \eta_{i}(\boldsymbol{\theta})T_i(\boldsymbol{x})-A(\boldsymbol{\theta})\right)
+f_X(\boldsymbol{X}\mid\boldsymbol{\theta})=h(\boldsymbol{x})\text{exp}\left(\sum_{i=1}^{s} \eta_{i}(\boldsymbol{\theta})T_i(\boldsymbol{x})-A(\boldsymbol{\theta})\right)
 $$
 
 or campactly 
