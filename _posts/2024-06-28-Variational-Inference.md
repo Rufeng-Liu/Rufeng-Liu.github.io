@@ -87,12 +87,14 @@ Thus, the variables $$\{\eta_1,\ldots,\eta_{n−1}\}$$ are randomly partitioned 
 
 $$
 \eta_n =  \begin{cases}
-   \eta^*_i & \text{with prob.} \frac{|\{j:c_j=i\}|}{n-1+\alpha}, \\
-   \eta & eta\sim \text{with prob.} \frac{\alpha}{n-1+\alpha},
+   \eta^*_i & \text{with prob.} \frac{|\{j:c_j=i\}|}{n-1+\alpha} \\
+   \eta, eta\sim G_0  & \text{with prob.} \frac{\alpha}{n-1+\alpha},
 \end{cases}
 $$
 
-where $$\|\{j:c_j=i\}\|$$ is the number of times the value $$\eta^{*}_{i}$$ occurs in $$\{\eta_1,\ldots,\eta_{n−1}\}$$.
+where $$\|\{j:c_j=i\}\|$$ is the number of times the value $$\eta^{*}_{i}$$ 
+
+occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
 
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
