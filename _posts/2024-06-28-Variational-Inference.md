@@ -66,8 +66,6 @@ $$
 \left(G(B_1),\ldots,G(B_k)\right)\sim \text{Dir}\left(\alpha G_0(B_1),\ldots,\alpha G_0(B_k)\right).
 $$
 
-The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. 
-
 Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
 
 $$
