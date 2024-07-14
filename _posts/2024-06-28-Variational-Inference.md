@@ -84,6 +84,15 @@ p(\cdot\mid \eta_1,\ldots,\eta_{n-1})\propto \alpha G_0(\cdot)+\sum_{i=1}^{n-1} 
 $$
 Thus, the variables $$\{\eta_1,\ldots,\eta_{n−1}\}$$ are randomly partitioned according to which variables are equal to the same value, with the distribution of the partition obtained from a Polya urn scheme. Let $$\{\eta^{*}_{1},\ldots,\eta^*_{|C|}\}$$ denote the distinct values of $$\{\eta_1,\ldots,\eta_{n−1}\}$$, let $$c = \{c_1,...,c_{n−1}\}$$ be assignment variables such that $$\eta_i = \eta^*_{c_i}$$, and let $$|c|$$ denote the number of cells in the partition. The distribution of $$\eta_n$$ follows the urn distribution:
 
+$$
+\eta_n =  \begin{cases}
+   \eta^*_i & with prob. \frac{|\{j:c_j=i\}|}{n-1+\alpha}, \\
+   \eta, eta\sim with prob. \frac{\alpha}{n-1+\alpha},
+\end{cases}
+$$
+
+where $$|\{j:c_j=i\}|$$ is the number of times the value $$\eta^*_i$$ occurs in $$\{\eta_1,\ldots,\eta_{n−1}\}$$.
+
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
 $$
