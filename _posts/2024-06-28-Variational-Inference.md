@@ -94,7 +94,7 @@ $$
 \end{cases}
 $$
 
-where $$|\left\{ j:c_j=i \right\}|$$ is the number of times the value $$\eta^{*}_{i}$$ 
+where $$|\lbrace j:c_j=i \rbrace|$$ is the number of times the value $$\eta^{*}_{i}$$ 
 
 occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
 
