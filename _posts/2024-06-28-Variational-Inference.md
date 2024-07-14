@@ -50,7 +50,7 @@ $$
 or campactly 
 
 $$
-f_X(\boldsymbol{X}\mid\boldsymbol{\theta})=h(\boldsymbol{x})exp\left(\boldsymbol{\eta}(\boldsymbol{\theta})\cdot T(\boldsymbol{x})-A(\boldsymbol{\theta})\right)
+f_X(\boldsymbol{X}\mid\boldsymbol{\theta})=h(\boldsymbol{x})\text{exp}\left(\boldsymbol{\eta}(\boldsymbol{\theta})\cdot T(\boldsymbol{x})-A(\boldsymbol{\theta})\right)
 $$
 
 The dimensions $$k$$ of the random variable need not match the dimension $$d$$ of the parameter vector, nor (in the case of a curved exponential function) the dimension $$s$$ of the natural parameter 
