@@ -87,7 +87,7 @@ Thus, the variables $$\{\eta_1,\ldots,\eta_{n−1}\}$$ are randomly partitioned 
 
 Let $$\{\eta^{*}_{1},\ldots,\{\eta^{*}_{\lvert \boldsymbol{c} \rvert }\}$$ denote the distinct values of $$\{\eta_1,\ldots,\eta _{n-1}\}$$,
 
-let $$\boldsymbol{c} = \{c_1,...,c_ {n−1}\}$$ be assignment variables such that $$\eta_i = \eta^*_ {c_i}$$, and let $$|\boldsymbol{c}|$$ denote the number of cells in the partition. The distribution of $$\eta_n$$ follows the urn distribution:
+let $$\boldsymbol{c} = \{c_1,...,c_ {n−1}\}$$ be assignment variables such that $$\eta_i = \eta^*_ {c_i}$$, and let $$\lvert\boldsymbol{c}\rvert$$ denote the number of cells in the partition. The distribution of $$\eta_n$$ follows the urn distribution:
 
 $$
 \eta_n =  \begin{cases}
