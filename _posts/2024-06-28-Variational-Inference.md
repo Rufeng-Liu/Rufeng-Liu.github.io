@@ -85,7 +85,7 @@ $$
 
 Thus, the variables $$\{\eta_1,\ldots,\eta_{n−1}\}$$ are randomly partitioned according to which variables are equal to the same value, with the distribution of the partition obtained from a Polya urn scheme.
 
-Let $$\{\eta^{*}_{1},\ldots,\eta^{*}_{1}\}$$ denote the distinct values of $$\{\eta_1,\ldots,\eta _{n-1}\}$$,
+Let $$\{\eta^{*}_{1},\ldots,\eta^{*}_ {1}\}$$ denote the distinct values of $$\{\eta_1,\ldots,\eta _{n-1}\}$$,
 
 let $$\boldsymbol{c} = \{c_1,...,c_{n−1}\}$$ be assignment variables such that $$\eta_i = \eta^*_{c_i}$$, and let $$\|\boldsymbol{c}\|$$ denote the number of cells in the partition. The distribution of $$\eta_n$$ follows the urn distribution:
 
