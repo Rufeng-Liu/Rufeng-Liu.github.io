@@ -60,7 +60,15 @@ $$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
 Citation <d-cite key="ferguson1973bayesian"></d-cite>
 
-A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$. The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
+A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$, if for all natural numbers $$k$$ and $$k$$-partitions $$\{B_1,\ldots,B_k\}$$:
+
+$$
+\left(G(B_1),\ldots,G(B_k)\right)\sim \text{Dir}\left(\alpha G_0(B_1),\ldots,\alpha G_0(B_k)\right).
+$$
+
+The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. 
+
+Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
 
 $$
 \begin{aligned} 
@@ -72,7 +80,7 @@ $$
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
 $$
-x_n\mid\eta_n,G\overset{ind}{\sim}p_n(\cdot;\eta_n), \quad \eta_n\mid G\overset{i.i.d}{\sim}G, \quad G\mid G_0,\alpha \sim \text{DP}(G_0,\alpha)
+x_n\mid\eta_n\overset{ind}{\sim}p_n(x_n;\eta_n), \quad \eta_n\mid G\overset{i.i.d}{\sim}G, \quad G\mid G_0,\alpha \sim \text{DP}(G_0,\alpha)
 $$
 
 Given a sample $$\{x_1,\ldots,x_N\}$$ from a DP mixture, the predictive density is
