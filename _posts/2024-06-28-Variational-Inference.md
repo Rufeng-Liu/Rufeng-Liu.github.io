@@ -77,6 +77,12 @@ G\mid G_0,\alpha &\sim \text{DP}(G_0,\alpha)\\
 \end{aligned}
 $$
 
+Conditioning on $$n − 1$$ draws, the $$n$$th value is, with positive probability, exactly equal to one of those draws:
+
+$$
+p(\cdot\mid \eta_1,\ldots,\eta_{n-1})\propto \alpha G_0(\cdot)+\sum_{i=1}^{n-1} \delta_{\eta_i}(\cdot).
+$$
+
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
 $$
