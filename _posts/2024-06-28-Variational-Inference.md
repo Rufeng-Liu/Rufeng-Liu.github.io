@@ -91,9 +91,9 @@ let $$\boldsymbol{c} = \{c_1,...,c_ {n−1}\}$$ be assignment variables such tha
 
 $$
 \eta_n =  \begin{cases}
-   \eta^*_i & \text{with prob.} \frac{|\lbrace j:c_j=i \rbrace|}{n-1+\alpha} \\
-   \eta, \eta\sim G_0  & \text{with prob.} \frac{\alpha}{n-1+\alpha},
-\end{cases}
+               \eta^*_i & \text{with prob.} \frac{|\lbrace j:c_j=i \rbrace|}{n-1+\alpha} \\
+               \eta, \eta\sim G_0  & \text{with prob.} \frac{\alpha}{n-1+\alpha},
+          \end{cases}
 $$
 
 where $$|\lbrace j:c_j=i \rbrace|$$ is the number of times the value $$\eta^{*}_{i}$$ occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
