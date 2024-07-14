@@ -89,7 +89,7 @@ let $$\boldsymbol{c} = \{c_1,...,c_ {n−1}\}$$ be assignment variables such tha
 
 $$
 \eta_n =  \begin{cases}
-   \eta^*_i & \text{with prob.} \frac{|\{j:c_j=i\}|}{n-1+\alpha} \\
+   \eta^*_i & \text{with prob.} \frac{|\lbracej:c_j=i\rbrace|}{n-1+\alpha} \\
    \eta, \eta\sim G_0  & \text{with prob.} \frac{\alpha}{n-1+\alpha},
 \end{cases}
 $$
