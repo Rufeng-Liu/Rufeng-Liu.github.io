@@ -118,13 +118,13 @@ $$
 G=\sum_{i=1}^{\infty} \pi_i(\boldsymbol{v})\delta_{\eta^*_i}, \quad \pi_i(\boldsymbol{v})=v_{i} \prod_{j=1}^{i-1}(1-v_j)
 $$
 
-In the DP mixture, the vector $$\pi(\boldsymbol{v})$$ comprises the infinite vector of mixing proportions and $${\eta^*_1,\eta^*_2,\ldots} are the atoms representing the mixture components. Let $$Z_n$$ be an assignment variable of the mixture component with which the data point $$x_n$$ is associated. The data can be described as arising from the following process:
+In the DP mixture, the vector $$\pi(\boldsymbol{v})$$ comprises the infinite vector of mixing proportions and $${\eta^*_1,\eta^*_2,\ldots}$$ are the atoms representing the mixture components. Let $$Z_n$$ be an assignment variable of the mixture component with which the data point $$x_n$$ is associated. The data can be described as arising from the following process:
 
-1. Draw $$V_i\sim \text{Beta}(1,\alpha), \quad i=\{1,2,\ldots\}
-2. Draw $$\eta^*_i\mid G_0\sim G_0, \quad \quad i=\{1,2,\ldots\}
+1. Draw $$V_i\sim \text{Beta}(1,\alpha), \quad i=\{1,2,\ldots\}$$
+2. Draw $$\eta^*_i\mid G_0\sim G_0, \quad \quad i=\{1,2,\ldots\}$$
 3. For the $$n$$th data point:
    (a) Draw $$Z_n\mid \{v_1,v_2,\ldots\}\sim \text{Mult}(\pi(\boldsymbol{v}))$$
-   (b) Draw $$X_n\mid z_n\sim p(x_n\mid \eta^*_{z_n})
+   (b) Draw $$X_n\mid z_n\sim p(x_n\mid \eta^*_{z_n})$$
 
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
