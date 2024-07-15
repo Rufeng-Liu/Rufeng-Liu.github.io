@@ -69,6 +69,7 @@ $$
 The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. 
 
 Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
+
 $$
 \begin{aligned} 
 G\mid G_0,\alpha &\sim \text{DP}(G_0,\alpha)\\
@@ -93,7 +94,9 @@ $$
           \end{cases}
 $$
 
-where $$|\lbrace j:c_j=i \rbrace|$$ is the number of times the value $$\eta^{*}_{i}$$ occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
+where $$|\lbrace j:c_j=i \rbrace|$$ is the number of times the value $$\eta^{*}_{i}$$ 
+
+occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
 
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
