@@ -66,8 +66,6 @@ $$
 \left(G(B_1),\ldots,G(B_k)\right)\sim \text{Dir}\left(\alpha G_0(B_1),\ldots,\alpha G_0(B_k)\right).
 $$
 
-The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. 
-
 Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
 
 $$
@@ -114,7 +112,11 @@ $$
 
 which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
 
+The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Consider two infinite collections of independent random variables, $$V_i\sim\text{Beta}(1,\alpha)$$ and $$\eta^*_i\sim G_0$$, for $$i=\{1,2,\ldots\}$$. The stick-breaking representation of $$G$$ is as follows:
 
+$$
+G=\sum_{i=1}^{\infty} \pi_i(\boldsymbol{v})\delta_{\eta^*_i}, \quad \pi_i(\boldsymbol{v})=v_{i} \prod_{j=1}^{i-1}(1-v_j)
+$$
 
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
