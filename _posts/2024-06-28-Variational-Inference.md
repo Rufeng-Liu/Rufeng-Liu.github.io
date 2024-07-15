@@ -124,7 +124,7 @@ In the DP mixture, the vector $$\pi(\boldsymbol{v})$$ comprises the infinite vec
 2. Draw $$\eta^*_i\mid G_0\sim G_0, \quad \quad i=\{1,2,\ldots\}$$
 3. For the $$n$$th data point:
    
-   (a) Draw $$Z_n\mid \{v_1,v_2,\ldots\}\sim \text{Mult}(\pi(\boldsymbol{v}))$$
+   (a) Draw $$Z_n\mid \{v_1,v_2,\ldots\}\sim \text{Mult}(\pi(\boldsymbol{v}))$$;
    (b) Draw $$X_n\mid z_n\sim p(x_n\mid \eta^*_{z_n})$$
 
 Restrict the DP mixtures that the observable data are drawn from an exponential family distribution, and where the base distribution for the DP is the corresponding conjugate prior.
