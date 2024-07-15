@@ -94,8 +94,9 @@ $$
           \end{cases}
 $$
 
+where  is the number of times the value $$\eta^{*}_{i}$$ occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
 
-where $$|\{j:c_{j}=i \}|$$ is the number of times the value $$\eta^{*}_{i}$$ occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
+$$|\{j : c_ {j}=i\}|$$
 
 Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
