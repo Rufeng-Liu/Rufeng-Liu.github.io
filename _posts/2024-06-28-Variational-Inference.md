@@ -126,6 +126,14 @@ In the DP mixture, the vector $$\pi(\boldsymbol{v})$$ comprises the infinite vec
    (a) Draw $$Z_n\mid \{v_1,v_2,\ldots\}\sim \text{Mult}(\pi(\boldsymbol{v}))$$
    (b) Draw $$X_n\mid z_n\sim p(x_n\mid \eta^*_{z_n})$$
 
+Restrict the DP mixtures that the observable data are drawn from an exponential family distribution, and where the base distribution for the DP is the corresponding conjugate prior.
+
+The distribution of $$X_n$$ conditional on $$Z_n$$ and $${\eta^*_1,\eta^*_2,\ldots}$$ is:
+
+$$
+p(x_n\mid z_n,\eta^*_1,\eta^*_2,\ldots)=\prod_{i=1}^{\infty} \left(h(x_n) \right)^{\mathbbm{1}\lbrack z_n=i\rbrack}
+$$
+
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
 
