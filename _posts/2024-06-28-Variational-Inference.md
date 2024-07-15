@@ -140,7 +140,7 @@ where $$a(\eta^*_i)$$ is the appropriate cumulant function and we assume for sim
 The vector of sufficient statistics of the corresponding conjugate family is $$({\eta^* _i}^T, -a(\eta^*_i) )^T$$. The base distribution is:
 
 $$
-p(\eta^*\mid \lambda) = h(\eta^*) \text{exp}\left\{\lambda_1^T \eta^* + \lambda_2 (-a(\eta^*))-a(\eta^*)\right\}
+p(\eta^*\mid \lambda) = h(\eta^*) \text{exp}\left\{\lambda_1^T \eta^* + \lambda_2 (-a(\eta^*))-a(\lambda)\right\}
 $$
 
 where we decompose the hyperparameter $$\lambda$$, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
