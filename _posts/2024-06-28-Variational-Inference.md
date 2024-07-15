@@ -132,12 +132,18 @@ Restrict the DP mixtures that the observable data are drawn from an exponential 
 The distribution of $$X_n$$ conditional on $$Z_n$$ and $${\eta^*_1,\eta^*_2,\ldots}$$ is:
 
 $$
-p(x_n\mid z_n,\eta^*_1,\eta^*_2,\ldots)=\prod_{i=1}^{\infty} \left(h(x_n) \text{exp}({\eta^*_i}^T x_n-a(\eta^*_i)) \right)^{\mathbf{1}\lbrack z_n=i\rbrack}
+p(x_n\mid z_n,\eta^*_1,\eta^*_2,\ldots)=\prod_{i=1}^{\infty} \left(h(x_n) \text{exp}\{\eta^*_i}^T x_n-a(\eta^*_i)\} \right)^{\mathbf{1}\lbrack z_n=i\rbrack}
 $$
 
 where $$a(\eta^*_i)$$ is the appropriate cumulant function and we assume for simplicity that $$x$$ is the sufficient statistic for the natural parameter $$\eta$$.
 
+Thevector of sufficient statistics of the corresponding conjugate family is $$(\eta^*_i}^T, -a(\eta^*_i))^T$$. The base distribution is:
 
+$$
+p(\eta^*\mid \lambda) = h(\eta^*) \text{exp}\{\lambda_1^T \eta^* + \lambda_2 (-a(\eta^*))-a(\eta^*)\}
+$$
+
+where we decompose the hyperparameter $$\lambda$$ such that $$\lambda_1 contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
 
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
