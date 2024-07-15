@@ -143,7 +143,7 @@ $$
 p(\eta^*\mid \lambda) = h(\eta^*) \text{exp}\left\{\lambda_1^T \eta^* + \lambda_2 (-a(\eta^*))-a(\eta^*)\right\}
 $$
 
-where we decompose the hyperparameter $$\lambda$$ such that $$\lambda_1 contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
+where we decompose the hyperparameter $$\lambda$$ such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
 
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
