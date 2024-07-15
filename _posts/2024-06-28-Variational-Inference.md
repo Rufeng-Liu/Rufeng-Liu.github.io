@@ -112,17 +112,18 @@ $$
 
 which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
 
-The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Consider two infinite collections of independent random variables, $$V_i\sim\text{Beta}(1,\alpha)$$ and $$\eta^*_i\sim G_0$$, for $$i=\{1,2,\ldots\}$$. The stick-breaking representation of $$G$$ is as follows:
+The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Consider two infinite collections of independent random variables, $$V_i\sim\text{Beta}(1,\alpha)$$ and $$\eta^*_i\sim G_0$$, for $$i=\{1,2,\ldots\}$$. The stick-breaking     representation of $$G$$ is as follows:
 
 $$
 G=\sum_{i=1}^{\infty} \pi_i(\boldsymbol{v})\delta_{\eta^*_i}, \quad \pi_i(\boldsymbol{v})=v_{i} \prod_{j=1}^{i-1}(1-v_j)
 $$
 
-In the DP mixture, the vector $$\pi(\boldsymbol{v})$$ comprises the infinite vector of mixing proportions and $${\eta^*_1,\eta^*_2,\ldots}$$ are the atoms representing the mixture components. Let $$Z_n$$ be an assignment variable of the mixture component with which the data point $$x_n$$ is associated. The data can be described as arising from the following process:
+In the DP mixture, the vector $$\pi(\boldsymbol{v})$$ comprises the infinite vector of mixing proportions and $$\{\eta^*_1,\eta^*_2,\ldots\}$$ are the atoms representing the mixture components. Let $$Z_n$$ be an assignment variable of the mixture component with which the data point $$x_n$$ is associated. The data can be described as arising from the following process:
 
 1. Draw $$V_i\sim \text{Beta}(1,\alpha), \quad i=\{1,2,\ldots\}$$
 2. Draw $$\eta^*_i\mid G_0\sim G_0, \quad \quad i=\{1,2,\ldots\}$$
 3. For the $$n$$th data point:
+   
    (a) Draw $$Z_n\mid \{v_1,v_2,\ldots\}\sim \text{Mult}(\pi(\boldsymbol{v}))$$
    (b) Draw $$X_n\mid z_n\sim p(x_n\mid \eta^*_{z_n})$$
 
@@ -131,8 +132,12 @@ Restrict the DP mixtures that the observable data are drawn from an exponential 
 The distribution of $$X_n$$ conditional on $$Z_n$$ and $${\eta^*_1,\eta^*_2,\ldots}$$ is:
 
 $$
-p(x_n\mid z_n,\eta^*_1,\eta^*_2,\ldots)=\prod_{i=1}^{\infty} \left(h(x_n) \right)^{\mathbbm{1}\lbrack z_n=i\rbrack}
+p(x_n\mid z_n,\eta^*_1,\eta^*_2,\ldots)=\prod_{i=1}^{\infty} \left(h(x_n) \text{exp}({\eta^*_i}^T x_n-a(\eta^*_i)) \right)^{\mathbf{1}\lbrack z_n=i\rbrack}
 $$
+
+where $$a(\eta^*_i)$$ is the appropriate cumulant function and we assume for simplicity that $$x$$ is the sufficient statistic for the natural parameter $$\eta$$.
+
+
 
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
