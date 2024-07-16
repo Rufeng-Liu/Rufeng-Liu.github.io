@@ -13,10 +13,13 @@ toc:
   - name: Exponential families
   - name: Dirichlet process and Dirichlet process mixture 
   - name: Inference
-    - name: Gibbs sampling
-      - name: Collapsed Gibbs sampling
-      - name: Blocked Gibbs sampling
-    - name: Variational inference
+        subsections:
+       - name: Gibbs sampling
+       - name: Variational inference
+    #- name: Gibbs sampling
+     # - name: Collapsed Gibbs sampling
+     # - name: Blocked Gibbs sampling
+    #- name: Variational inference
   - name: Implementation 
 
 _styles: >
