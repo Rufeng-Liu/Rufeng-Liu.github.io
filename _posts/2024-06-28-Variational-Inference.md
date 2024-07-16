@@ -13,7 +13,7 @@ toc:
   - name: Exponential families
   - name: Dirichlet process and Dirichlet process mixture 
   - name: Inference
-        subsections:
+    subsections:
        - name: Gibbs sampling
        - name: Variational inference
     #- name: Gibbs sampling
