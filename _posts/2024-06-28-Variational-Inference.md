@@ -13,10 +13,11 @@ toc:
   - name: Exponential families
   - name: Dirichlet process and Dirichlet process mixture 
   - name: Inference 
-    # if a section has subsections, you can add them as follows:
     # subsections:
-    #   - name: Example Child Subsection 1
-    #   - name: Example Child Subsection 2
+       - name: Gibbs sampling
+           - name: Collapsed Gibbs sampling
+           - name: Blocked Gibbs sampling
+       - name: Variational inference
   - name: Implementation 
 
 _styles: >
@@ -147,6 +148,13 @@ where we decompose the hyperparameter $$\lambda$$, such that $$\lambda_1$$ conta
 
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
+### Gibbs sampling
+
+#### Collapesd Gibbs sampling
+
+#### Blocked Gibbs sampling
+
+### Variational inference
 
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
