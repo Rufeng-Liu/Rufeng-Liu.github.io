@@ -12,11 +12,11 @@ bibliography: 2024-06-28-Variational-Inference.bib
 toc:
   - name: Exponential families
   - name: Dirichlet process and Dirichlet process mixture 
-  - name: Inference 
-        - name: Gibbs sampling
-              - name: Collapsed Gibbs sampling
-              - name: Blocked Gibbs sampling
-        - name: Variational inference
+  - name: Inference
+    - name: Gibbs sampling
+      - name: Collapsed Gibbs sampling
+      - name: Blocked Gibbs sampling
+    - name: Variational inference
   - name: Implementation 
 
 _styles: >
