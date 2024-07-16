@@ -15,13 +15,10 @@ toc:
   - name: Inference
     subsections:
        - name: Gibbs sampling
-         subsubsections:
+    subsubsections:
             - name: Collapsed Gibbs sampling
             - name: Blocked Gibbs sampling
        - name: Variational inference
-    #- name: Gibbs sampling
-     # 
-    #- name: Variational inference
   - name: Implementation 
 
 _styles: >
