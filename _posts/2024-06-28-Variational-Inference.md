@@ -62,7 +62,7 @@ $$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
 Citation <d-cite key="ferguson1973bayesian"></d-cite>
 
-A Dirichlet process $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$, if for all natural numbers $$k$$ and $$k$$-partitions $$\{B_1,\ldots,B_k\}$$:
+A (`Dirichlet process`) $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$, if for all natural numbers $$k$$ and $$k$$-partitions $$\{B_1,\ldots,B_k\}$$:
 
 $$
 \left(G(B_1),\ldots,G(B_k)\right)\sim \text{Dir}\left(\alpha G_0(B_1),\ldots,\alpha G_0(B_k)\right).
@@ -114,7 +114,7 @@ $$
 
 which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
 
-The stick-breaking representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Consider two infinite collections of independent random variables, $$V_i\sim\text{Beta}(1,\alpha)$$ and $$\eta^*_i\sim G_0$$, for $$i=\{1,2,\ldots\}$$. The stick-breaking     representation of $$G$$ is as follows:
+The (`stick-breaking`) representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Consider two infinite collections of independent random variables, $$V_i\sim\text{Beta}(1,\alpha)$$ and $$\eta^*_i\sim G_0$$, for $$i=\{1,2,\ldots\}$$. The stick-breaking representation of $$G$$ is as follows:
 
 $$
 G=\sum_{i=1}^{\infty} \pi_i(\boldsymbol{v})\delta_{\eta^*_i}, \quad \pi_i(\boldsymbol{v})=v_{i} \prod_{j=1}^{i-1}(1-v_j)
@@ -150,8 +150,9 @@ where we decompose the hyperparameter $$\lambda$$, such that $$\lambda_1$$ conta
 ## Inference 
 Citation <d-cite key="blei2017variational"></d-cite>
 ### Gibbs sampling
-
+Review of the collapsed Gibbs sampler and blocked Gibbs sampler for DP mixtures.
 #### Collapesd Gibbs sampling
+The (`collapsed Gibbs sampler`) for a DP mixture with conjugate base distribution integrates out the random measure $$G$$ and distinct parameter values $$\{\eta^{*}_{1},\ldots,\eta^{*}_{\lvert \boldsymbol{c} \rvert }\}$$. The Markov chain is thus defined only on the latent partition $$\boldsymbol{c} = \{c_1,...,c_ {N}\}$$, where $$\lvert\boldsymbol{c}\rvert$$ denote the number of cells in the partition. The algorithm iteratively samples each assignment variable $$C_n$$, for $$n\in \{1,\ldots,N\}$$, conditional on the other cells in the partition, $$\boldsymbol{c_{-n}}$$. The assignment $$C_n$$ can be one of $$\lvert \boldsymbol{c_{-n}}\rvert +1$$ values: either the nth data point is in a cell with other data points, or in a cell by itself.
 
 #### Blocked Gibbs sampling
 
