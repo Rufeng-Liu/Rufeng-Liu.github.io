@@ -62,7 +62,7 @@ $$\boldsymbol{\eta}$$ and sufficient statistic $$T(\boldsymbol{x})$$ .
 
 Citation <d-cite key="ferguson1973bayesian"></d-cite>
 
-A (`Dirichlet process`) $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$, if for all natural numbers $$k$$ and $$k$$-partitions $$\{B_1,\ldots,B_k\}$$:
+A `Dirichlet process` $$G$$ is parameterized by a centering measure $$G_0$$ and a positive presicion/scaling parameter $$\alpha$$, if for all natural numbers $$k$$ and $$k$$-partitions $$\{B_1,\ldots,B_k\}$$:
 
 $$
 \left(G(B_1),\ldots,G(B_k)\right)\sim \text{Dir}\left(\alpha G_0(B_1),\ldots,\alpha G_0(B_k)\right).
