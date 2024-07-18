@@ -152,7 +152,7 @@ Citation <d-cite key="blei2017variational"></d-cite>
 ### Gibbs sampling
 Review of the collapsed Gibbs sampler and blocked Gibbs sampler for DP mixtures.
 #### Collapesd Gibbs sampling
-The (`collapsed Gibbs sampler`) for a DP mixture with conjugate base distribution integrates out the random measure $$G$$ and distinct parameter values $$\{\eta^{*}_{1},\ldots,\eta^{*}_{\lvert \boldsymbol{c} \rvert }\}$$. The Markov chain is thus defined only on the latent partition $$\boldsymbol{c} = \{c_1,...,c_ {N}\}$$, where $$\lvert\boldsymbol{c}\rvert$$ denote the number of cells in the partition. The algorithm iteratively samples each assignment variable $$C_n$$, for $$n\in \{1,\ldots,N\}$$, conditional on the other cells in the partition, $$\boldsymbol{c_{-n}}$$. The assignment $$C_n$$ can be one of $$\lvert \boldsymbol{c_{-n}}\rvert +1$$ values: either the nth data point is in a cell with other data points, or in a cell by itself. 
+The `collapsed Gibbs sampler` for a DP mixture with conjugate base distribution integrates out the random measure $$G$$ and distinct parameter values $$\{\eta^{*}_{1},\ldots,\eta^{*}_{\lvert \boldsymbol{c} \rvert }\}$$. The Markov chain is thus defined only on the latent partition $$\boldsymbol{c} = \{c_1,...,c_ {N}\}$$, where $$\lvert\boldsymbol{c}\rvert$$ denote the number of cells in the partition. The algorithm iteratively samples each assignment variable $$C_n$$, for $$n\in \{1,\ldots,N\}$$, conditional on the other cells in the partition, $$\boldsymbol{c_{-n}}$$. The assignment $$C_n$$ can be one of $$\lvert \boldsymbol{c_{-n}}\rvert +1$$ values: either the nth data point is in a cell with other data points, or in a cell by itself. 
 
 #### Blocked Gibbs sampling
 
