@@ -38,8 +38,17 @@ _styles: >
 ---
 
 ## Sampling Weights 
+Construct a base weight for each sampled unit, the reciprocal of its probability of selection into the sample, to correct for their unequal probabilities of selection, e.g, $$w_i=\frac{1}{p_i}$$.
+
+For multi-stage designs, the base weights must reflect the probabilities of selection at each stage, e.g, $$p_{ij}=p_i\times p_{j(i)}$$. Then, base weight $$w_{ij,b}=\frac{1}{p_{ij}}$$.
+
+The weight for non-response $$w_{ij,nr}$$, and the weight for non-coverage is $$w_{ij,nc}$$, will be explained later. The overall weight is $$w_{ij}=w_{ij,b}\times w_{ij,nr} \times w_{ij,nc}$$.
+
+Some units have duplicates on the frame, then increased probability of selection of such units can be compensated. Suppose the $$i$$-th sampled unit has a probability of selections denoted by $$p_{i1},\ldots,p_{ik}$$,  the adjusted probability of selection of the sampled unit is $$p_i=1-(1-p_{i1})(1-p_{i2})\cdots(1-p_{ik})$$, then $$w_i=\frac{1}{p_i}$$.
 
 ### For non-response
+
+
 ### For non-coverage
 
 ## NHANES
