@@ -74,4 +74,6 @@ Several procedures for handling the problem of non-coverage:
 2. Compensating for the non-coverage through a statistical adjustment of the weights.
 
 ## NHANES
+[Weighting in NHANES](https://wwwn.cdc.gov/nchs/nhanes/tutorials/weighting.aspx).
+
 
