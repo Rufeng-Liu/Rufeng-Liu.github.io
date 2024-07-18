@@ -55,7 +55,23 @@ For `total non-response`, there are three basic procedures for compensation:
 2. Drawing a larger sample than needed and creating a reserve sample from which replacements are selected in case of non-response.  
 3. Substitution, the process of replacing a non-responding participant with another participant that was not sampled which is in close proximity to the non-responding participant with respect to the characteristic of interest. 
 
+#### Non-response adjustment of sample weights 
+
+The adjustment transfers the base weights of all eligible non-responding sampled units to the responding units.
+
+1. Apply the initial weights;
+2. Partition the sample into subgroups and compute weighted response rates for each subgroup;
+3. Use the reciprocal of the subgroup response rates for non-response adjustments;
+4. Calculate the non-response adjusted weight for the $$i$$-th unit as $$w_i=w_{1i}\times w_{2i}, where $$w_{1i}$$ is the initial weight and $$w_{2i}$$ is the non-response adjustment weight. 
+ 
 ### For non-coverage
+
+`Non-coverage` refers to the failure of the sampling frame to cover all of the target population and thus some sampling units have no probability of selection into the sample selected for the survey. 
+
+Several procedures for handling the problem of non-coverage:
+
+1. Improved field procedures such as the use of multiple frames and improved listing procedures;
+2. Compensating for the non-coverage through a statistical adjustment of the weights.
 
 ## NHANES
 
