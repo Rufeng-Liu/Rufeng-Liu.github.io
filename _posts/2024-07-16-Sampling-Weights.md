@@ -48,6 +48,9 @@ Some units have duplicates on the frame, then increased probability of selection
 
 ### For non-response
 
+In a survey, participants may provide no data at all (`total non-response`) or only partial data (`item non-response`). If there are any systematic differences between the respondents and non-respondents, then naive estimates based solely on the respondents will be biased. The size of the non-response bias for a sample mean, for instance, is a function of two factors: (1) the proportion of the population that does not respond, (2) the size of the difference in population means between respondent and nonrespondent groups. Reducing the bias due to non-response therefore requires that either the non-response rate be small, or that there are small differences between responding and non-responding households and persons. 
+
+For total non-response, there are three basic procedures for compensation:
 
 ### For non-coverage
 
