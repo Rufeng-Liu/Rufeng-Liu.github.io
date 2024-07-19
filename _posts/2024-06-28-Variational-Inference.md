@@ -148,11 +148,22 @@ $$
 where we decompose the hyperparameter $$\lambda$$, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
 
 ## Inference 
+
 Citation <d-cite key="blei2017variational"></d-cite>
+
 ### Gibbs sampling
+
 Review of the collapsed Gibbs sampler and blocked Gibbs sampler for DP mixtures.
+
 #### Collapesd Gibbs sampling
-The `collapsed Gibbs sampler` for a DP mixture with conjugate base distribution integrates out the random measure $$G$$ and distinct parameter values $$\{\eta^{*}_{1},\ldots,\eta^{*}_{\lvert \boldsymbol{c} \rvert }\}$$. The Markov chain is thus defined only on the latent partition $$\boldsymbol{c} = \{c_1,...,c_ {N}\}$$, where $$\lvert\boldsymbol{c}\rvert$$ denote the number of cells in the partition. The algorithm iteratively samples each assignment variable $$C_n$$, for $$n\in \{1,\ldots,N\}$$, conditional on the other cells in the partition, $$\boldsymbol{c_{-n}}$$. The assignment $$C_n$$ can be one of $$\lvert \boldsymbol{c_{-n}}\rvert +1$$ values: either the nth data point is in a cell with other data points, or in a cell by itself. 
+
+The `collapsed Gibbs sampler` for a DP mixture with conjugate base distribution integrates out the random measure $$G$$ and distinct parameter values $$\{\eta^{*}_{1},\ldots,\eta^{*}_{\lvert \boldsymbol{c} \rvert }\}$$. The Markov chain is thus defined only on the latent partition $$\boldsymbol{c} = \{c_1,...,c_ {N}\}$$, where $$\lvert\boldsymbol{c}\rvert$$ denote the number of cells in the partition. The algorithm iteratively samples each assignment variable $$C_n$$, for $$n\in \{1,\ldots,N\}$$, conditional on the other cells in the partition, $$\boldsymbol{c_{-n}}$$. The assignment $$C_n$$ can be one of $$\lvert \boldsymbol{c_{-n}}\rvert +1$$ values: either the $$n$$th data point is in a cell with other data points, or in a cell by itself. 
+
+Exchangeability implies that $$C_n$$ has the following multinomial distribution:
+
+$$
+p(c_n=k\mid \boldsymbol{x},\boldsymbol{c}_ {-n},\lambda,\alpha)\propto p(x_n\mid \boldsymbol{x}_ {-n}, \boldsymbol{c}_ {-n}, c_n=k, \lambda)p(c_n=k\mid \boldsymbol{c}_ {-n}, \alpha)
+$$
 
 #### Blocked Gibbs sampling
 
