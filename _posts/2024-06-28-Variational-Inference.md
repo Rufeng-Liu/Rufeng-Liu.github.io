@@ -168,7 +168,7 @@ $$
 The first term is a ratio of normalizing constants of the posterior distribution of the $$k$$th parameter, one including and one excluding the $$n$$th data point:
 
 $$
-p(x_n\mid \boldsymbol{x}_ {-n}, \boldsymbol{c}_ {-n}, c_n=k, \lambda)=\frac{\text{exp}\left\{a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m +x_n, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack +1)\right\}}{\text{exp}\left\{a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack)\right\}}
+p(x_n\mid \boldsymbol{x}_ {-n}, \boldsymbol{c}_ {-n}, c_n=k, \lambda)=\frac{\text{exp}\left\{ a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m +x_n, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack +1)\right\}}{\text{exp}\left\{ a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack)\right\}}
 $$
 
 #### Blocked Gibbs sampling
