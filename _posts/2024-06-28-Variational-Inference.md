@@ -168,9 +168,18 @@ $$
 The first term is a ratio of normalizing constants of the posterior distribution of the $$k$$th parameter, one including and one excluding the $$n$$th data point:
 
 $$
-p(x_n\mid \boldsymbol{x}_ {-n}, \boldsymbol{c}_ {-n}, c_n=k, \lambda)=\frac{\text{exp}\left\{ a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m +x_n, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack +1)\right\}}{\text{exp}\left\{ a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack)\right\}}
+p(x_n\mid \boldsymbol{x}_ {-n}, \boldsymbol{c}_ {-n}, c_n=k, \lambda)=\frac{\text{exp}\lbrace a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m +x_n, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack +1)\rbrace}{\text{exp}\lbrace a(\lambda_1+\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack x_m, \lambda_2 +\sum_{m\neq n} \mathbf{1} \lbrack c_m =k \rbrack)\rbrace}
 $$
 
+The second term is given by the Polya urn scheme:
+
+$$
+p(c_n=k\mid \boldsymbol{c}_ {-n}, \alpha) = \begin{case} \vert\lbrace j:c_{-n,j}=k \rbrace\vert & \text{if } k \text{ is an existing cell in the partition}\\
+\alpha & \text{if } k \text{ is a new cell in the partition}
+\end{case}
+$$
+
+where $$\vert\lbrace j:c_{-n,j}=k \rbrace\vert$$ denotes the number of data points in the kth cell of the partition $$\boldsymbol{c}_{-n}$$.
 #### Blocked Gibbs sampling
 
 ### Variational inference
