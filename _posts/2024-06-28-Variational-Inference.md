@@ -174,9 +174,9 @@ $$
 The second term is given by the Polya urn scheme:
 
 $$
-p(c_n=k\mid \boldsymbol{c}_ {-n}, \alpha) = \begin{case} \vert\lbrace j:c_{-n,j}=k \rbrace\vert & \text{if } k \text{ is an existing cell in the partition}\\
+p(c_n=k\mid \boldsymbol{c}_ {-n}, \alpha) = \begin{cases} \vert\lbrace j:c_{-n,j}=k \rbrace\vert & \text{if } k \text{ is an existing cell in the partition}\\
 \alpha & \text{if } k \text{ is a new cell in the partition}
-\end{case}
+\end{cases}
 $$
 
 where $$\vert\lbrace j:c_{-n,j}=k \rbrace\vert$$ denotes the number of data points in the kth cell of the partition $$\boldsymbol{c}_{-n}$$.
