@@ -165,6 +165,8 @@ $$
 p(c_n=k\mid \boldsymbol{x},\boldsymbol{c}_ {-n},\lambda,\alpha)\propto p(x_n\mid \boldsymbol{x}_ {-n}, \boldsymbol{c}_ {-n}, c_n=k, \lambda)p(c_n=k\mid \boldsymbol{c}_ {-n}, \alpha)
 $$
 
+
+
 #### Blocked Gibbs sampling
 
 ### Variational inference
