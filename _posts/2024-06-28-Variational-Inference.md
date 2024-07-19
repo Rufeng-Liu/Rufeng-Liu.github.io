@@ -180,6 +180,19 @@ p(c_n=k\mid \boldsymbol{c}_ {-n}, \alpha) = \begin{cases} \vert\lbrace j:c_{-n,j
 $$
 
 where $$\vert\lbrace j:c_{-n,j}=k \rbrace\vert$$ denotes the number of data points in the kth cell of the partition $$\boldsymbol{c}_{-n}$$.
+
+After the chain has reached stationary distribution, we collect $$B$$ samples $$\lbrace \boldsymbol{c}_1, \dots, \boldsymbol{c}_B \rbrace$$ to approximate the posterior. The approximate predictive distribution is an average of the predictive distributions across the Monte Carlo samples:
+
+$$
+p(x_{N+1}\mid x_1, \ldots, x_N,\alpha,\lambda)=\frac{1}{N} \sum_{b=1}^{B} p(x_{N+1}\mid \boldsymbol{c}_b,\boldsymbol{x},\alpha,\lambda)
+$$
+
+For a given sample, that distribution is:
+
+$$
+p(x_{N+1}\mid \boldsymbol{c}_ {b},\boldsymbol{x},\alpha,\lambda) = \sum_{k=1}^{\vert \boldsymbol{c}_ b \vert+1} p(c_{N+1}=k \mid \boldsymbol{c}_ b,\alpha)p(x_{N+1}\mid \boldsymbol{c}_ b, \boldsymbol{x}, c_{N+1}=k, \lambda)
+$$
+
 #### Blocked Gibbs sampling
 
 ### Variational inference
