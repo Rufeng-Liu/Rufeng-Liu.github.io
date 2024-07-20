@@ -194,6 +194,8 @@ p(x_{N+1}\mid \boldsymbol{c}_ {b},\boldsymbol{x},\alpha,\lambda) = \sum_{k=1}^{\
 $$
 
 #### Blocked Gibbs sampling
+Ishwaran and James <d-cite key="ishwaran2001gibbs"></d-cite> developed a `blocked Gibbs sampling` algorithm based on the `stick-breaking` representation. A truncated Dirichlet process is defined 
+
 
 ### Variational inference
 
