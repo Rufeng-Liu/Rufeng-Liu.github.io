@@ -201,7 +201,7 @@ In the TDP mixture, the state of the Markov chain consists of the beta variables
 1. For $$n\in\{1,\ldots,N\}$$, independently sample $$Z_n$$ from:
 
 $$
-p(z_n=k\mid \boldsymbol{v},\boldsymbol{\eta}^*,\boldsymbol{x})=\pi_{k}(\boldsymbol{v})p(x_n\mid \eta^*_k)
+p(z_n=k\mid \boldsymbol{v},\boldsymbol{\eta}^*,\boldsymbol{x}) = \pi_{k}(\boldsymbol{v})p(x_n\mid \eta^* _k)
 $$
 
 2. For $$k\in\{1,\ldots,K\}$$, independently sample $$V_k$$ from $$\text{Beta}(\gamma_{k,1},\gamma_{k,2})$$, where:
