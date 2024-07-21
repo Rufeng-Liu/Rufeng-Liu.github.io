@@ -209,7 +209,7 @@ $$
 $$
 \begin{aligned} 
 \gamma_{k,1} & = 1 + \sum_{n=1}^{N} \mathbf{1}\lbrack z_n=k \rbrack \\
-\gamma_{k,2} & = \alpha + \sum_{i=k+1}^{K} \mathbf{1}\lbrack z_n=i \rbrack 
+\gamma_{k,2} & = \alpha + \sum_{i=k+1}^{K} \sum_{n=1}^{N} \mathbf{1}\lbrack z_n=i \rbrack 
 \end{aligned}
 $$
 
@@ -222,7 +222,11 @@ $$
 \end{aligned}
 $$
 
+After the chain has reached its stationary distribution, we collect $$B$$ samples and construct an approximate predictive distribution. For a particular sample:
 
+$$
+p(x_{N+1}\mid \boldsymbol{z},\boldsymbol{x},\alpha,\lambda) = \sum_{k=1}^{K} \mathrm{E}\lbrack \pi_{i}(\boldsymbol{V} \mid \gamma_1,\ldots,\gamma_k) \rbrack p(x_{N+1}\mid \tau_k)
+$$
 
 ### Variational inference
 
