@@ -222,6 +222,8 @@ In the TDP mixture, the state of the Markov chain consists of the beta variables
    \end{aligned}
    $$
 
+   where as before, we decompose the hyperparameter $$\lambda$$ of the conjugate exponential family, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
+   
 After the chain has reached its stationary distribution, we collect $$B$$ samples and construct an approximate predictive distribution. For a particular sample:
 
 $$
