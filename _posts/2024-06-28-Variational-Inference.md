@@ -198,29 +198,29 @@ Ishwaran and James <d-cite key="ishwaran2001gibbs"></d-cite> developed a `blocke
 
 In the TDP mixture, the state of the Markov chain consists of the beta variables $$\boldsymbol{V}=\{V_1,\ldots,V_{K-1}\}$$, the mixture component parameters $$\boldsymbol{\eta}^*=\{\eta_1^*,\ldots,\eta_K^*\}$$, and the indicator variables $$\boldsymbol{Z}=\{Z_1,\ldots,Z_N\}$$. The blocked Gibbs sampler iterates between the following three steps:
 
-  1. For $$n\in\{1,\ldots,N\}$$, independently sample $$Z_n$$ from:
+1. For $$n\in\{1,\ldots,N\}$$, independently sample $$Z_n$$ from:
 
-$$
-p(z_n=k\mid \boldsymbol{v},\boldsymbol{\eta}^*,\boldsymbol{x}) = \pi_{k}(\boldsymbol{v})p(x_n\mid \eta^* _k)
-$$
+   $$
+   p(z_n=k\mid \boldsymbol{v},\boldsymbol{\eta}^*,\boldsymbol{x}) = \pi_{k}(\boldsymbol{v})p(x_n\mid \eta^* _k)
+   $$
 
-  2. For $$k\in\{1,\ldots,K\}$$, independently sample $$V_k$$ from $$\text{Beta}(\gamma_{k,1},\gamma_{k,2})$$, where:
+2. For $$k\in\{1,\ldots,K\}$$, independently sample $$V_k$$ from $$\text{Beta}(\gamma_{k,1},\gamma_{k,2})$$, where:
 
-$$
-\begin{aligned} 
-\gamma_{k,1} & = 1 + \sum_{n=1}^{N} \mathbf{1}\lbrack z_n=k \rbrack \\
-\gamma_{k,2} & = \alpha + \sum_{i=k+1}^{K} \sum_{n=1}^{N} \mathbf{1}\lbrack z_n=i \rbrack 
-\end{aligned}
-$$
+   $$
+   \begin{aligned} 
+   \gamma_{k,1} & = 1 + \sum_{n=1}^{N} \mathbf{1}\lbrack z_n=k \rbrack \\
+   \gamma_{k,2} & = \alpha + \sum_{i=k+1}^{K} \sum_{n=1}^{N} \mathbf{1}\lbrack z_n=i \rbrack 
+   \end{aligned}
+   $$
 
-  3. For $$k\in\{1,\ldots,K\}$$, independently sample $$\eta_k^*$$ from $$p(\eta^ *_k \mid \tau_k)$$. This distribution is in the same family as the base distribution, with parameters:
+3. For $$k\in\{1,\ldots,K\}$$, independently sample $$\eta_k^*$$ from $$p(\eta^ *_k \mid \tau_k)$$. This distribution is in the same family as the base distribution, with parameters:
 
-$$
-\begin{aligned} 
-\tau_{k,1} & = \lambda_1 + \sum_{i\neq n} \mathbf{1}\lbrack z_i=k \rbrack x_i\\
-\tau_{k,2} & = \lambda_2 + \sum_{i\neq n} \mathbf{1}\lbrack z_i=k \rbrack 
-\end{aligned}
-$$
+   $$
+   \begin{aligned} 
+   \tau_{k,1} & = \lambda_1 + \sum_{i\neq n} \mathbf{1}\lbrack z_i=k \rbrack x_i\\
+   \tau_{k,2} & = \lambda_2 + \sum_{i\neq n} \mathbf{1}\lbrack z_i=k \rbrack 
+   \end{aligned}
+   $$
 
 After the chain has reached its stationary distribution, we collect $$B$$ samples and construct an approximate predictive distribution. For a particular sample:
 
