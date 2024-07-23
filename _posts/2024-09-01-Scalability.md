@@ -36,4 +36,7 @@ _styles: >
 
 ## Definition 
 
+---
 ## Examples 
+
+---
