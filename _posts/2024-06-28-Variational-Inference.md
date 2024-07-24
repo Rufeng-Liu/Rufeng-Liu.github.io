@@ -252,6 +252,15 @@ $$
 To constructe the family $$q_{\nu}(\boldsymbol{w})$$, we need to break some of dependencies between latent variables which make the true posterior difficult to compute.
 
 #### Mean field variational inference in exponential families
+
+For each latent variable, assume that the conditional distribution is a member of the exponential family:
+
+$$
+p(w_{i}\mid \boldsymbol{w}_ {-i},\boldsymbol{x},\theta)=h(w_{i})\text{exp} \lbrace {g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)}^T w_{i} - a(g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)) \rbrace
+$$
+
+where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural parameter for $$\boldsymbol{w}_{i}$$ when conditioning on the remaining latent variables and the observations.
+
 #### Coordinate ascent algorithm for DP mixtures 
 
 ## Implementation 
