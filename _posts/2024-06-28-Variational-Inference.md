@@ -264,7 +264,7 @@ where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural param
 Consider the following family of distributions as meanf ield variational approximations:
 
 $$
-q_{\boldsymbol{\nu}}(\boldsymbol{w})=\prod_{i=1}^{M} \text{exp} \lbrace \nu_{i}^T w_{i} - a(w_{i}) \rbrace
+q_{\boldsymbol{\nu}}(\boldsymbol{w})=\prod_{i=1}^{M} q_{\nu_i}(w_i) =\prod_{i=1}^{M} \text{exp} \lbrace \nu_{i}^T w_{i} - a(w_{i}) \rbrace
 $$
 
 where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational parameters. Then it is shown that the optimization of KL divergence with respect to a single variational parameter $$\nu_{i}$$ is achieved by computing the following expectation:
@@ -272,6 +272,7 @@ where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational p
 $$
 \nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta) \rbrack
 $$
+
 
 
 #### Coordinate ascent algorithm for DP mixtures 
