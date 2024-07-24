@@ -273,6 +273,8 @@ $$
 \nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta) \rbrack
 $$
 
+In a coordinate ascent algorithm, the bound with respect to each $$\nu_i$$ is iteratively maximized, holding the other variational parameters fixed.
+
 
 
 #### Coordinate ascent algorithm for DP mixtures 
