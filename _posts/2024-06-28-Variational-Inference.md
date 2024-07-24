@@ -19,6 +19,9 @@ toc:
             - name: Collapsed Gibbs sampling
             - name: Blocked Gibbs sampling
        - name: Variational inference
+         subsubsections:
+            - name: Mean field variational inference in exponential families
+            - name: Coordinate ascent algorithm for DP mixtures    
   - name: Implementation 
 
 _styles: >
@@ -247,6 +250,9 @@ $$
 $$
 
 To constructe the family $$q_{\nu}(\boldsymbol{w})$$, we need to break some of dependencies between latent variables which make the true posterior difficult to compute.
+
+#### Mean field variational inference in exponential families
+#### Coordinate ascent algorithm for DP mixtures 
 
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
