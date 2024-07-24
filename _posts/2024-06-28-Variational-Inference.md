@@ -234,6 +234,12 @@ $$
 
 Consider a model with hyperparameters $$\theta$$, latent variables $$\boldsymbol{W}=\lbrace W_1,\ldots,W_M\rbrace$$, and observations $$\boldsymbol{x}=\lbrace x_1,\ldots,x_N\rbrace$$. The posterior distribution of the latent variables $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)=\frac{p(\boldsymbol{x},\boldsymbol{w}\mid \theta)}{p(\boldsymbol{x}\mid \theta)}=\text{exp}\lbrace\log p(\boldsymbol{x},\boldsymbol{w}\mid \theta)-\log p(\boldsymbol{x}\mid \theta)\rbrace$$ is difficult to compute, because the latent variables become dependent when conditioning on observed data, then $$\log p(\boldsymbol{x}\mid \theta)=\log \int p(\boldsymbol{x},\boldsymbol{w}\mid \theta)d\boldsymbol{w}$$ is hard to compute.
 
+A class of variational methods known as `mean-field methods` are based on optimizing Kullback-Leibler (KL) divergence with respect to a so-called variational distribution. Let $$q_{\nu}(\boldsymbol{w})$$ be a family of distributions indexed by a variational parameter $$\nu$$, we aim to minimize the KL divergence between $$q_{\nu}(\boldsymbol{w})$$ and $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)$$:
+
+$$
+\mathbf{D}(q_{\nu}(\boldsymbol{w}) \Vert p(\boldsymbol{w}\mid\boldsymbol{x},\theta)) = \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack - \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack + \log p(\boldsymbol{x}\mid \theta)
+$$
+
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
