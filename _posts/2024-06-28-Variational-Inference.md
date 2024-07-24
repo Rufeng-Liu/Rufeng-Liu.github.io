@@ -71,7 +71,7 @@ $$
 \left(G(B_1),\ldots,G(B_k)\right)\sim \text{Dir}\left(\alpha G_0(B_1),\ldots,\alpha G_0(B_k)\right).
 $$
 
-Suppose we independently draw $$N$$ random variables $$\eta_n$$ from $$G$$:
+Suppose $$N$$ random variables $$\eta_n$$ are independently drawn from $$G$$:
 
 $$
 \begin{aligned} 
@@ -103,7 +103,7 @@ $$|\{j : c_ {j}=i\}|$$
 
 is the number of times the value $$\eta^{*}_{i}$$ occurs in $$\{\eta_{1},\ldots,\eta_{n−1}\}$$.
 
-Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or we can have non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
+Given Dirichlet process $$G$$, a DP mixtures are densities $$p(x)=\int p(x, \eta)d\eta$$, or there can be non-i.i.d observations $$x_n\overset{ind}{\sim}p_{n,G}(x)=\int p(x;\eta)dG(\eta)$$, in terms of $$N$$ latent variables $$\eta_1,\ldots,\eta_N$$, the model can be written as 
 
 $$
 x_n\mid\eta_n\overset{ind}{\sim}p_n(x_n;\eta_n), \quad \eta_n\mid G\overset{i.i.d}{\sim}G, \quad G\mid G_0,\alpha \sim \text{DP}(G_0,\alpha)
@@ -115,7 +115,7 @@ $$
 p(x\mid x_1,\ldots,x_N,\alpha,G_0)=\int p(x\mid \eta)p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)d\eta
 $$
 
-which we can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
+which one can use MCMC to achieve posterior draws, together with posterior distribution $$p(\eta\mid x_1,\ldots,x_N,\alpha,G_0)$$.
 
 The `stick-breaking` representation <d-cite key="sethuraman1994constructive"></d-cite> is widely used. Consider two infinite collections of independent random variables, $$V_i\sim\text{Beta}(1,\alpha)$$ and $$\eta^*_i\sim G_0$$, for $$i=\{1,2,\ldots\}$$. The stick-breaking representation of $$G$$ is as follows:
 
@@ -140,7 +140,7 @@ $$
 p(x_n\mid z_n,\eta^*_1,\eta^*_2,\ldots)=\prod_{i=1}^{\infty} \left(h(x_n) \text{exp} \left\{ {\eta^* _i}^T x_n-a(\eta^*_i) \right\} \right)^{\mathbf{1}\lbrack z_n=i \rbrack}
 $$
 
-where $$a(\eta^*_i)$$ is the appropriate cumulant function and we assume for simplicity that $$x$$ is the sufficient statistic for the natural parameter $$\eta$$.
+where $$a(\eta^*_i)$$ is the appropriate cumulant function and it is assumed for simplicity that $$x$$ is the sufficient statistic for the natural parameter $$\eta$$.
 
 The vector of sufficient statistics of the corresponding conjugate family is $$({\eta^* _i}^T, -a(\eta^*_i) )^T$$. The base distribution is:
 
@@ -148,7 +148,7 @@ $$
 p(\eta^*\mid \lambda) = h(\eta^*) \text{exp}\left\{\lambda_1^T \eta^* + \lambda_2 (-a(\eta^*))-a(\lambda)\right\}
 $$
 
-where we decompose the hyperparameter $$\lambda$$, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
+where the hyperparameter $$\lambda$$ is decomposed, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
 
 ## Inference 
 
@@ -184,7 +184,7 @@ $$
 
 where $$\vert\lbrace j:c_{-n,j}=k \rbrace\vert$$ denotes the number of data points in the kth cell of the partition $$\boldsymbol{c}_{-n}$$.
 
-After the chain has reached stationary distribution, we collect $$B$$ samples $$\lbrace \boldsymbol{c}_1, \dots, \boldsymbol{c}_B \rbrace$$ to approximate the posterior. The approximate predictive distribution is an average of the predictive distributions across the Monte Carlo samples:
+After the chain has reached stationary distribution, $$B$$ samples $$\lbrace \boldsymbol{c}_1, \dots, \boldsymbol{c}_B \rbrace$$ are collected to approximate the posterior. The approximate predictive distribution is an average of the predictive distributions across the Monte Carlo samples:
 
 $$
 p(x_{N+1}\mid x_1, \ldots, x_N,\alpha,\lambda)=\frac{1}{N} \sum_{b=1}^{B} p(x_{N+1}\mid \boldsymbol{c}_b,\boldsymbol{x},\alpha,\lambda)
@@ -225,9 +225,9 @@ In the TDP mixture, the state of the Markov chain consists of the beta variables
    \end{aligned}
    $$
 
-   where as before, we decompose the hyperparameter $$\lambda$$ of the conjugate exponential family, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
+   where as before, the hyperparameter $$\lambda$$ of the conjugate exponential family is decomposeed, such that $$\lambda_1$$ contains the first $$\dim(\eta^*)$$ components and $$\lambda_2$$ is a scalar.
    
-After the chain has reached its stationary distribution, we collect $$B$$ samples and construct an approximate predictive distribution. For a particular sample:
+After the chain has reached its stationary distribution, $$B$$ samples are collected and an approximate predictive distribution can be constructed. For a particular sample:
 
 $$
 p(x_{N+1}\mid \boldsymbol{z},\boldsymbol{x},\alpha,\lambda) = \sum_{k=1}^{K} \mathrm{E}\lbrack \pi_{i}(\boldsymbol{V} \mid \gamma_1,\ldots,\gamma_k) \rbrack p(x_{N+1}\mid \tau_k)
@@ -237,7 +237,7 @@ $$
 
 Consider a model with hyperparameters $$\theta$$, latent variables $$\boldsymbol{W}=\lbrace W_1,\ldots,W_M\rbrace$$, and observations $$\boldsymbol{x}=\lbrace x_1,\ldots,x_N\rbrace$$. The posterior distribution of the latent variables $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)=\frac{p(\boldsymbol{x},\boldsymbol{w}\mid \theta)}{p(\boldsymbol{x}\mid \theta)}=\text{exp}\lbrace\log p(\boldsymbol{x},\boldsymbol{w}\mid \theta)-\log p(\boldsymbol{x}\mid \theta)\rbrace$$ is difficult to compute, because the latent variables become dependent when conditioning on observed data, then $$\log p(\boldsymbol{x}\mid \theta)=\log \int p(\boldsymbol{x},\boldsymbol{w}\mid \theta)d\boldsymbol{w}$$ is hard to compute.
 
-A class of variational methods known as `mean-field methods` are based on optimizing Kullback-Leibler (KL) divergence with respect to a so-called variational distribution. Let $$q_{\nu}(\boldsymbol{w})$$ be a family of distributions indexed by a variational parameter $$\nu$$, we aim to minimize the KL divergence between $$q_{\nu}(\boldsymbol{w})$$ and $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)$$:
+A class of variational methods known as `mean-field methods` are based on optimizing Kullback-Leibler (KL) divergence with respect to a so-called variational distribution. Let $$q_{\nu}(\boldsymbol{w})$$ be a family of distributions indexed by a variational parameter $$\nu$$, the aim is to minimize the KL divergence between $$q_{\nu}(\boldsymbol{w})$$ and $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)$$:
 
 $$
 \mathbf{D}(q_{\nu}(\boldsymbol{w}) \Vert p(\boldsymbol{w}\mid\boldsymbol{x},\theta)) = \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack - \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack + \log p(\boldsymbol{x}\mid \theta)
@@ -249,7 +249,7 @@ $$
 \log p(\boldsymbol{x}\mid \theta) \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack 
 $$
 
-To constructe the family $$q_{\nu}(\boldsymbol{w})$$, we need to break some of dependencies between latent variables which make the true posterior difficult to compute.
+To constructe the family $$q_{\nu}(\boldsymbol{w})$$, it is in need to break some of dependencies between latent variables which make the true posterior difficult to compute.
 
 #### Mean field variational inference in exponential families
 
@@ -267,11 +267,12 @@ $$
 q_{\boldsymbol{\nu}}(\boldsymbol{w})=\prod_{i=1}^{M} \text{exp} \lbrace \nu_{i}^T w_{i} - a(w_{i}) \rbrace
 $$
 
-where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational parameters. Then we show the optimization of KL divergence with respect to a single variational parameter $$\nu_{i}$$ is achieved by computing the following expectation:
+where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational parameters. Then it is shown that the optimization of KL divergence with respect to a single variational parameter $$\nu_{i}$$ is achieved by computing the following expectation:
 
 $$
 \nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta) \rbrack
 $$
+
 
 #### Coordinate ascent algorithm for DP mixtures 
 
