@@ -232,6 +232,8 @@ $$
 
 ### Variational inference
 
+Consider a model with hyperparameters $$\theta$$, latent variables $$\boldsymbol{W}=\{W_1,\ldots,W_M\}$$, and observations $$\boldsymbol{x}=\{x_1,\ldots,x_N\}$$. The posterior distribution of the latent variables $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)=\frac{p(\boldsymbol{x},\boldsymbol{w}\mid \theta)}{p(\boldsymbol{x}\mid \theta)}=\text{exp}\{\log p(\boldsymbol{x},\boldsymbol{w}\mid \theta)-\log p(\boldsymbol{x}\mid \theta)\}$$ is difficult to compute, because the latent variables become dependent when conditioning on observed data, then $$\log p(\boldsymbol{x}\mid \theta)=\log \int p(\boldsymbol{x},\boldsymbol{w}\mid \theta)d\boldsymbol{w}$$ is hard to compute.
+
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
