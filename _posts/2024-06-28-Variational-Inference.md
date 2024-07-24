@@ -240,6 +240,14 @@ $$
 \mathbf{D}(q_{\nu}(\boldsymbol{w}) \Vert p(\boldsymbol{w}\mid\boldsymbol{x},\theta)) = \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack - \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack + \log p(\boldsymbol{x}\mid \theta)
 $$
 
+As the marginal probability does not depend on the variational parameters, it can be ignored in the optimization. To minimize the KL divergence can be cast alternatively as to compute the maximization of a lower bound on the log marginal likelihood:
+
+$$
+\log p(\boldsymbol{x}\mid \theta) \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack 
+$$
+
+To constructe the family $$q_{\nu}(\boldsymbol{w})$$, we need to break some of dependencies between latent variables which make the true posterior difficult to compute.
+
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
