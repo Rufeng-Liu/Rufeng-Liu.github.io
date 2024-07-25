@@ -325,7 +325,7 @@ where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural param
 $$
 \begin{aligned} 
 \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack & = \mathbf{E}_ {q} \lbrack \log h(W_{i})\rbrack + \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta)}^T \rbrack a'(\nu_i) - \mathbf{E}_ {q} \lbrack a(g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta)) \rbrack \\
-\frac{\partial}{\partial \nu_i} \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack & = \frac{\partial}{\partial \nu_i} \mathbf{E}_ {q} \lbrack \log h(W_{i})\rbrack + \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta)}^T \rbrack a''(\nu_i)
+
 \end{aligned}
 $$
 
