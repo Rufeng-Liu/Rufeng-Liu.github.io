@@ -305,7 +305,7 @@ $$
 The derivative with respect to $$\nu_i$$ is:
 
 $$
-\frac{\partial l_{i}}{\partial \nu_i} = \frac{\partial}{\partial \nu_i} \lbrace \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack \rbrace - \nu_i^T a''(\nu_i)
+\frac{\partial l_{i}}{\partial \nu_i} = \frac{\partial}{\partial \nu_i} \lparen \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rparen - \mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack \rbrace - \nu_i^T a''(\nu_i)
 $$
 
 #### Coordinate ascent algorithm for DP mixtures 
