@@ -305,13 +305,13 @@ $$
 The derivative with respect to $$\nu_i$$ is:
 
 $$
-\frac{\partial l_{i}}{\partial \nu_i} = \frac{\partial}{\partial \nu_i} ( \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack \rparen - \nu_i^T a''(\nu_i)
+\frac{\partial l_{i}}{\partial \nu_i} = \frac{\partial}{\partial \nu_i} ( \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack ) - \nu_i^T a''(\nu_i)
 $$
 
 let partial derivative equals $$0$$, the optimal $$\nu_i$$ satisfies:
 
 $$
-\nu_i = \lbrack a''(\nu_i) \rbrack ^{-1} ( \frac{\partial}{\partial \nu_i}\mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \frac{\partial}{\partial \nu_i}\mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack \rparen
+\nu_i = \lbrack a''(\nu_i) \rbrack ^{-1} ( \frac{\partial}{\partial \nu_i}\mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \frac{\partial}{\partial \nu_i}\mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack )
 $$
 
 as we assumed that the conditional distribution is a member of the exponential family:
