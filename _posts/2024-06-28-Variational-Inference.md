@@ -261,13 +261,13 @@ $$
 
 where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural parameter for $$\boldsymbol{w}_{i}$$ when conditioning on the remaining latent variables and the observations.
 
-Consider the following family of distributions as meanf ield variational approximations:
+Consider the following family of distributions as mean field variational approximations:
 
 $$
 q_{\boldsymbol{\nu}}(\boldsymbol{w})=\prod_{i=1}^{M} q_{\nu_i}(w_i) =\prod_{i=1}^{M} \text{exp} \lbrace \nu_{i}^T w_{i} - a(w_{i}) \rbrace
 $$
 
-where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational parameters. Then it is shown that the optimization of KL divergence with respect to a single variational parameter $$\nu_{i}$$ is achieved by computing the following expectation:
+where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational parameters and each distribution is in the exponential family. Then it is shown that the optimization of KL divergence with respect to a single variational parameter $$\nu_{i}$$ is achieved by computing the following expectation:
 
 $$
 \nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta) \rbrack
@@ -275,6 +275,11 @@ $$
 
 In a coordinate ascent algorithm, the bound with respect to each $$\nu_i$$ is iteratively maximized, holding the other variational parameters fixed.
 
+Using the chain rule, the bound can be rewriten:
+
+$$
+\log p(\boldsymbol{x}\mid \theta) \geq \log p(\boldsymbol{x}\mid \theta) + \sum_{m=1}^{M} \mathbf{E}_ {q} \lbrack \log p(W_m \mid W_1,\ldots, W_{m-1} \boldsymbol{x},\theta) \rbrack - \sum_{m=1}^{M} \mathbf{E}_ {q} \lbrack \log q_{\nu_m}(W_m) \rbrack
+$$
 
 
 #### Coordinate ascent algorithm for DP mixtures 
