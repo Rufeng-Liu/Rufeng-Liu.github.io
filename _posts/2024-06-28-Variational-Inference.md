@@ -284,7 +284,7 @@ $$
 To optimize with respect to $$\nu_{i}$$, the part depend on $$\nu_{i}$$ is :
 
 $$
-l_{i}= \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}_ {-i} \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu_i}(W_i) \rbrack
+l_{i}= \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i} \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu_i}(W_i) \rbrack
 $$
 
 #### Coordinate ascent algorithm for DP mixtures 
