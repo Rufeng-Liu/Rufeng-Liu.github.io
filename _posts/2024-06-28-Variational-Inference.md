@@ -329,6 +329,12 @@ $$
 \end{aligned}
 $$
 
+Put first derivative in the equation of the optimal $$\nu_i$$:
+
+$$
+\nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta) \rbrack
+$$
+
 #### Coordinate ascent algorithm for DP mixtures 
 
 ## Implementation 
