@@ -284,7 +284,13 @@ $$
 To optimize with respect to $$\nu_{i}$$, the part depend on $$\nu_{i}$$ is :
 
 $$
-l_{i}= \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i} \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu_i}(W_i) \rbrack
+l_{i}= \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu_i}(W_i) \rbrack
+$$
+
+Given that the variational distribution $$q_{\nu_i}(w_i)$$ is in the exponential family:
+
+$$
+q_{\nu_i}(w_i)=h(w_i)\text{exp}\lbrace \nu_i^T w_i - a(\nu_i) \rbrace
 $$
 
 #### Coordinate ascent algorithm for DP mixtures 
