@@ -293,13 +293,19 @@ $$
 q_{\nu_i}(w_i)=h(w_i)\text{exp}\lbrace \nu_i^T w_i - a(\nu_i) \rbrace
 $$
 
-as $$\mathbf{E}_ {q} \lbrack W_i\rbrack = a'(\nu_i)$$, it is easy to see,
+as in the exponential family $$\mathbf{E}_ {q} \lbrack W_i\rbrack = a'(\nu_i)$$, it is easy to see,
 
 $$
 \begin{aligned} 
 l_{i} &= \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) - \log h(W_i) - \nu_i^T w_i + a(\nu_i) \rbrack \\
-&= \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack - \nu_i^T a(\nu_i) + a(\nu_i) 
+&= \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack - \nu_i^T a'(\nu_i) + a(\nu_i) 
 \end{aligned}
+$$
+
+The derivative with respect to $$\nu_i$$ is:
+
+$$
+\frac{\partial l_{i}}{\partial \nu_i} = 
 $$
 
 #### Coordinate ascent algorithm for DP mixtures 
