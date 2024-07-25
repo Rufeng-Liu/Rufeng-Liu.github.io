@@ -259,7 +259,7 @@ $$
 p(w_{i}\mid \boldsymbol{w}_ {-i},\boldsymbol{x},\theta)=h(w_{i})\text{exp} \lbrace {g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)}^T w_{i} - a(g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)) \rbrace
 $$
 
-where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural parameter for $$\boldsymbol{w}_{i}$$ when conditioning on the remaining latent variables and the observations.
+where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural parameter for $${w}_{i}$$ when conditioning on the remaining latent variables and the observations.
 
 Consider the following family of distributions as mean field variational approximations:
 
@@ -312,6 +312,21 @@ let partial derivative equals $$0$$, the optimal $$\nu_i$$ satisfies:
 
 $$
 \nu_i = \lbrack a''(\nu_i) \rbrack ^{-1} \lparen \frac{\partial}{\partial \nu_i}\mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack - \frac{\partial}{\partial \nu_i}\mathbf{E}_ {q} \lbrack \log h(W_i)  \rbrack \rparen
+$$
+
+as we assumed that the conditional distribution is a member of the exponential family:
+
+$$
+p(w_{i}\mid \boldsymbol{w}_ {-i},\boldsymbol{x},\theta)=h(w_{i})\text{exp} \lbrace {g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)}^T w_{i} - a(g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)) \rbrace
+$$
+
+where $$g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta)$$ is the natural parameter for $$w_{i}$$ when conditioning on the remaining latent variables and the observations. We have the expected log probability of $$W_i$$ and its first derivative:
+
+$$
+\begin{aligned} 
+\mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack & = \mathbf{E}_ {q} \lbrack \log h(W_{i})\rbrack + \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta)}^T \rbrack a'(\nu_i) - \mathbf{E}_ {q} \lbrack a(g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta)) \rbrack
+\frac{\partial}{\partial \nu_i} \mathbf{E}_ {q} \lbrack \log p(W_i \mid \boldsymbol{W}_ {-i}, \boldsymbol{x},\theta) \rbrack & = \frac{\partial}{\partial \nu_i} \mathbf{E}_ {q} \lbrack \log h(W_{i})\rbrack + \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta)}^T \rbrack a''(\nu_i)
+\end{aligned}
 $$
 
 #### Coordinate ascent algorithm for DP mixtures 
