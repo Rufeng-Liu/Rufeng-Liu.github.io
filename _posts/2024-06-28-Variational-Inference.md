@@ -270,7 +270,7 @@ $$
 where $$\boldsymbol{\nu}=\lbrace \nu_1,\ldots, \nu_M \rbrace$$ are variational parameters and each distribution is in the exponential family. Then it is shown that the optimization of KL divergence with respect to a single variational parameter $$\nu_{i}$$ is achieved by computing the following expectation:
 
 $$
-\nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{w}_ {-i},\boldsymbol{x},\theta) \rbrack
+\nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta) \rbrack
 $$
 
 In a coordinate ascent algorithm, the bound with respect to each $$\nu_i$$ is iteratively maximized, holding the other variational parameters fixed.
