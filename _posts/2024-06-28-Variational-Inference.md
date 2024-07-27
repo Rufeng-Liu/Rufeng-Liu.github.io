@@ -337,7 +337,7 @@ $$
 
 #### Coordinate ascent algorithm for DP mixtures 
 
-
+Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters.
 
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
