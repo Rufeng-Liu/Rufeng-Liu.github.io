@@ -349,7 +349,7 @@ $$
 The variational distribution is truncated at level $$T$$, the factorized family of variational distributions for mean field variational inference is:
 
 $$
-
+q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z})= \prod_{t=1}^{T-1} q_{\gamma_{t}}(\nu_t)\prod_{t=1}^{T} q_{\tau_{t}}(\eta_t^*) \prod_{n=1}^{N} q_{\phi_{n}}(z_n)
 $$
 
 ## Implementation 
