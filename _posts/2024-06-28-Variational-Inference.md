@@ -337,12 +337,12 @@ $$
 
 #### Coordinate ascent algorithm for DP mixtures 
 
-Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters. The variational bound on the log marginal probability of the data:
+Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters. The `variational bound` on the log marginal probability of the data:
 
 $$
 \begin{aligned}
 \log p(\boldsymbol{x}\mid \alpha,\lambda) & \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z},\boldsymbol{x}\mid \alpha,\lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack \\ 
-& = \sum_{n=1}^{N} (\mathbf{E}_ {q} \lbrack \log p(x_n \mid Z_n) \rbrack + \mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack) + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V} \mid \alpha) \rbrack + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{\eta}^* \mid \lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack
+& = \sum_{n=1}^{N} (\mathbf{E}_ {q} \lbrack \log p(x_n \mid Z_n) \rbrack + \mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack ) + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V} \mid \alpha) \rbrack + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{\eta}^* \mid \lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack
 \end{aligned}
 $$
 
@@ -355,8 +355,55 @@ $$
 where $$q_{\gamma_{t}}(\nu_t)$$ are beta distributions, $$q_{\tau_{t}}(\eta_t^*)$$ are exponential family distributions with natural parameters $$\tau_{t}$$, and $$q_{\phi_{n}}(z_n)$$ are multinomial distributions. The free variational parameters are:
 
 $$
-\boldsymbol{\nu}= \{ \gamma_{1}, \ldots, \gamma_{T-1}, \tau_{1}, \ldots, \tau_{T}, \phi_{1}, \ldots, \phi_{N}\}
+\boldsymbol{\nu} = \{ \gamma_{1}, \ldots, \gamma_{T-1}, \tau_{1}, \ldots, \tau_{T}, \phi_{1}, \ldots, \phi_{N}\}
 $$
+
+In the `variational bound` on the log marginal probability of the data, $$\mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack$$ is the only term not involving standard computations in the exponential family, which can be rewriten using indicator random variables:
+
+$$
+\begin{aligned}
+\mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack &= \mathbf{E}_ {q} \lbrack \log (\prod_{i=1}^{\infty} (1-V_i)^{\mathbf{1}\lbrack Z_n>i \rbrack} V_{i}^{\mathbf{1}\lbrack Z_n=i \rbrack} ) \rbrack \\
+& = \prod_{i=1}^{\infty} q(z_n>i) \mathbf{E}_ {q} \lbrack \log (1-V_i) \rbrack + q(z_n=i) \mathbf{E}_ {q} \lbrack \log V_i \rbrack
+\end{aligned}
+$$
+
+Truncated at $$t=T$$
+
+$$
+\mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack = \prod_{i=1}^{T} q(z_n>i) \mathbf{E}_ {q} \lbrack \log (1-V_i) \rbrack + q(z_n=i) \mathbf{E}_ {q} \lbrack \log V_i \rbrack
+$$
+
+where 
+
+$$
+\begin{aligned}
+q(z_n=i) &= \phi_{n,i} \\
+q(z_n>i) &= \sum_{j=i+1}^{T} \phi_{n,j} \\
+\mathbf{E}_ {q} \lbrack \log V_i \rbrack &= \Psi(\gamma_{i,1}) - \Psi(\gamma_{i,1}+\gamma_{i,2})\\
+\mathbf{E}_ {q} \lbrack \log (1-V_i) \rbrack &= \Psi(\gamma_{i,2}) - \Psi(\gamma_{i,1}+\gamma_{i,2})
+\end{aligned}
+$$
+
+The digamma function $$\Psi$$ is derivative of the log-partition ($$A(\eta)$$) in the beta distribution.
+
+From the conclusion in last subsection $$\nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta) \rbrack$$, a mean-field coordinate ascent algorithm is derived:
+
+$$
+\gamma_{t,1} = 1 + \sum_{n} \phi_{n,t}
+\gamma_{t,2} = \alpha + \sum_{n} \sum_{j=t+1}^{T} \phi_{n,t}
+\tau_{t,1} = \lambda_1 + \sum_{n} \phi_{n,t} x_n
+\tau_{t,2} = \lambda_1 + \sum_{n} \phi_{n,t}
+\phi_{n,t} \prop \text{exp}(S_t)
+$$
+
+for $$t\in \{\1,\ldots,T}, n\in \{1,\ldots, N\}$$, where
+
+$$
+S_t = \mathbf{E}_ {q} \lbrack \log V_t \rbrack + \sum_{i=1}^{t-1} \mathbf{E}_ {q} \lbrack \log (1-V_i) \rbrack + \mathbf{E}_ {q} \lbrack \eta_{t}^* \rbrack ^T X_n - \mathbf{E}_ {q} \lbrack a(\eta_{t}^*) \rbrack
+$$
+
+Iterating these updates optimizes `variational bound` with respect to the variational parameters in the factorized family of variational distributions $$\mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack$$.
+
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
