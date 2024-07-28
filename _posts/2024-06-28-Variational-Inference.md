@@ -240,13 +240,13 @@ Consider a model with hyperparameters $$\theta$$, latent variables $$\boldsymbol
 A class of variational methods known as `mean-field methods` are based on optimizing Kullback-Leibler (KL) divergence with respect to a so-called variational distribution. Let $$q_{\nu}(\boldsymbol{w})$$ be a family of distributions indexed by a variational parameter $$\nu$$, the aim is to minimize the KL divergence between $$q_{\nu}(\boldsymbol{w})$$ and $$p(\boldsymbol{w}\mid\boldsymbol{x},\theta)$$:
 
 $$
-\mathbf{D}(q_{\nu}(\boldsymbol{w}) \Vert p(\boldsymbol{w}\mid\boldsymbol{x},\theta)) = \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack - \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack + \log p(\boldsymbol{x}\mid \theta)
+\mathbf{D}(q_{\nu}(\boldsymbol{w}) \Vert p(\boldsymbol{w}\mid\boldsymbol{x},\theta)) = \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack - \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W},\boldsymbol{x}\mid\theta) \rbrack + \log p(\boldsymbol{x}\mid \theta)
 $$
 
 As the marginal probability does not depend on the variational parameters, it can be ignored in the optimization. To minimize the KL divergence can be cast alternatively as to compute the maximization of a lower bound on the log marginal likelihood:
 
 $$
-\log p(\boldsymbol{x}\mid \theta) \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W}\mid\boldsymbol{x},\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack 
+\log p(\boldsymbol{x}\mid \theta) \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{W},\boldsymbol{x}\mid\theta) \rbrack - \mathbf{E}_ {q} \lbrack \log q_{\nu}(\boldsymbol{W}) \rbrack 
 $$
 
 To constructe the family $$q_{\nu}(\boldsymbol{w})$$, it is in need to break some of dependencies between latent variables which make the true posterior difficult to compute.
@@ -337,7 +337,11 @@ $$
 
 #### Coordinate ascent algorithm for DP mixtures 
 
-Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters.
+Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters. The variational bound on the log marginal probability of the data:
+
+$$
+\log p(\boldsymbol{x}\mid \theta) \geq 
+$$
 
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
