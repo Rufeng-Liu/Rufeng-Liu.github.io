@@ -404,6 +404,20 @@ $$
 
 Iterating these updates optimizes `variational bound` with respect to the variational parameters in the factorized family of variational distributions $$\mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack$$.
 
+The predictive distribution is:
+
+$$
+p(x_{N+1}\mid \boldsymbol{x}, \alpha, \lambda) = \int (\sum_{t=1}^{\infty} \pi_t(\boldsymbol{V}) p(x_{N+1}\mid \eta_{t}^*)) d P(\boldsymbol{v},\boldsymbol{\eta}^*\mid \boldsymbol{x}, \alpha, \lambda)
+$$
+
+it is approximated with a product of expectations:
+
+$$
+p(x_{N+1}\mid \boldsymbol{x}, \alpha, \lambda) \approx \sum_{t=1}^{T} \mathbf{E}_ {q} \lbrack \pi_t(\boldsymbol{V}) \rbrack \mathbf{E}_ {q} \lbrack p(x_{N+1}\mid \eta_{t}^*) \rbrack
+$$
+
+where $$q$$ depends on $$\boldsymbol{x}, \alpha, \lambda$$.
+
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
