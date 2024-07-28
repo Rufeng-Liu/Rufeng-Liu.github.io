@@ -340,17 +340,20 @@ $$
 Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters. The variational bound on the log marginal probability of the data:
 
 $$
-\begin{split}
 \log p(\boldsymbol{x}\mid \alpha,\lambda) \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z},\boldsymbol{x}\mid \alpha,\lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack \\ = \sum_{n=1}^{N} (\mathbf{E}_ {q} \lbrack \log p(x_n \mid Z_n) \rbrack + \mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack) + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V} \mid \alpha) \rbrack + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{\eta}^* \mid \lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack
-\end{split}
 $$
 
 The variational distribution is truncated at level $$T$$, the factorized family of variational distributions for mean field variational inference is:
 
 $$
-q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z})= \prod_{t=1}^{T-1} q_{\gamma_{t}}(\nu_t)\prod_{t=1}^{T} q_{\tau_{t}}(\eta_t^*) \prod_{n=1}^{N} q_{\phi_{n}}(z_n)
+q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z})= \prod_{t=1}^{T-1} q_{\gamma_{t}}(\nu_t) \prod_{t=1}^{T} q_{\tau_{t}}(\eta_t^*) \prod_{n=1}^{N} q_{\phi_{n}}(z_n)
 $$
 
+where $$q_{\gamma_{t}}(\nu_t)$$ are beta distributions, $$q_{\tau_{t}}(\eta_t^*)$$ are exponential family distributions with natural parameters $$\tau_{t}$$, and $$q_{\phi_{n}}(z_n)$$ are multinomial distributions. The free variational parameters are:
+
+$$
+\boldsymbol{\nu}= \{ \gamma_{1}, \ldots, \gamma_{T-1}, \tau_{1}, \ldots, \tau_{T}, \phi_{1}, \ldots, \phi_{N}\}
+$$
 ## Implementation 
 Citation <d-cite key="blei2017variational"></d-cite> <d-cite key="blei2006variational"></d-cite>
 
