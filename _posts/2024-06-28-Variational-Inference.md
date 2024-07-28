@@ -389,14 +389,14 @@ The digamma function $$\Psi$$ is derivative of the log-partition ($$A(\eta)$$) i
 From the conclusion in last subsection $$\nu_{i} = \mathbf{E}_ {q} \lbrack g_{i}(\boldsymbol{W}_ {-i},\boldsymbol{x},\theta) \rbrack$$, a mean-field coordinate ascent algorithm is derived:
 
 $$
-\gamma_{t,1} = 1 + \sum_{n} \phi_{n,t}
-\gamma_{t,2} = \alpha + \sum_{n} \sum_{j=t+1}^{T} \phi_{n,t}
-\tau_{t,1} = \lambda_1 + \sum_{n} \phi_{n,t} x_n
-\tau_{t,2} = \lambda_1 + \sum_{n} \phi_{n,t}
+\gamma_{t,1} = 1 + \sum_{n} \phi_{n,t} \\
+\gamma_{t,2} = \alpha + \sum_{n} \sum_{j=t+1}^{T} \phi_{n,t} \\
+\tau_{t,1} = \lambda_1 + \sum_{n} \phi_{n,t} x_n \\
+\tau_{t,2} = \lambda_1 + \sum_{n} \phi_{n,t} \\
 \phi_{n,t} \propto \text{exp}(S_t)
 $$
 
-for $$t\in \{1,\ldots,T}, n\in \{1,\ldots, N\}$$, where
+for $$ t \in\{1, \ldots,T\}, n\in \{1, \ldots, N\}$$, where
 
 $$
 S_t = \mathbf{E}_ {q} \lbrack \log V_t \rbrack + \sum_{i=1}^{t-1} \mathbf{E}_ {q} \lbrack \log (1-V_i) \rbrack + \mathbf{E}_ {q} \lbrack \eta_{t}^* \rbrack ^T X_n - \mathbf{E}_ {q} \lbrack a(\eta_{t}^*) \rbrack
