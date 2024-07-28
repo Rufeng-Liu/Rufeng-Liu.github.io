@@ -396,7 +396,7 @@ $$
 \phi_{n,t} \prop \text{exp}(S_t)
 $$
 
-for $$t\in \{\1,\ldots,T}, n\in \{1,\ldots, N\}$$, where
+for $$t\in \{1,\ldots,T}, n\in \{1,\ldots, N\}$$, where
 
 $$
 S_t = \mathbf{E}_ {q} \lbrack \log V_t \rbrack + \sum_{i=1}^{t-1} \mathbf{E}_ {q} \lbrack \log (1-V_i) \rbrack + \mathbf{E}_ {q} \lbrack \eta_{t}^* \rbrack ^T X_n - \mathbf{E}_ {q} \lbrack a(\eta_{t}^*) \rbrack
