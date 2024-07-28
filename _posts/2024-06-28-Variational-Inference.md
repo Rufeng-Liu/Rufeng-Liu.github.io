@@ -340,7 +340,10 @@ $$
 Based on the stick-breaking representation, the latent variables are the stick lengths, the atoms, and the cluster assignments: $$\boldsymbol{W}=\{\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}\}$$, with the scaling parameter and the parameter of the conjugate base distribution $$\theta = \{\alpha,\lambda\}$$ as the hyperparameters. The variational bound on the log marginal probability of the data:
 
 $$
-\log p(\boldsymbol{x}\mid \theta) \geq 
+\begin{aligned} 
+\log p(\boldsymbol{x}\mid \alpha,\lambda) $ \geq \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z},\boldsymbol{x}\mid \alpha,\lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack \\
+$ = \sum_{n=1}^{N} (\mathbf{E}_ {q} \lbrack \log p(x_n \mid Z_n) \rbrack + \mathbf{E}_ {q} \lbrack \log p(Z_n \mid \boldsymbol{V}) \rbrack) + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{V} \mid \alpha) \rbrack + \mathbf{E}_ {q} \lbrack \log p(\boldsymbol{\eta}^* \mid \lambda) \rbrack - \mathbf{E}_ {q} \lbrack \log q(\boldsymbol{V},\boldsymbol{\eta}^*,\boldsymbol{Z}) \rbrack
+\end{aligned}
 $$
 
 ## Implementation 
