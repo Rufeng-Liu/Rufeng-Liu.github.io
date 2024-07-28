@@ -278,7 +278,7 @@ In a coordinate ascent algorithm, the bound with respect to each $$\nu_i$$ is it
 Using the chain rule, the bound can be rewriten:
 
 $$
-\log p(\boldsymbol{x}\mid \theta) \geq \log p(\boldsymbol{x}\mid \theta) + \sum_{m=1}^{M} \mathbf{E}_ {q} \lbrack \log p(W_m \mid W_1,\ldots, W_{m-1} \boldsymbol{x},\theta) \rbrack - \sum_{m=1}^{M} \mathbf{E}_ {q} \lbrack \log q_{\nu_m}(W_m) \rbrack
+\log p(\boldsymbol{x}\mid \theta) \geq \log p(\boldsymbol{x}\mid \theta) + \sum_{m=1}^{M} \mathbf{E}_ {q} \lbrack \log p(W_m \mid W_1,\ldots, W_{m-1}, \boldsymbol{x},\theta) \rbrack - \sum_{m=1}^{M} \mathbf{E}_ {q} \lbrack \log q_{\nu_m}(W_m) \rbrack
 $$
 
 To optimize with respect to $$\nu_{i}$$, the part depend on $$\nu_{i}$$ is :
