@@ -393,7 +393,7 @@ $$
 \gamma_{t,2} = \alpha + \sum_{n} \sum_{j=t+1}^{T} \phi_{n,t}
 \tau_{t,1} = \lambda_1 + \sum_{n} \phi_{n,t} x_n
 \tau_{t,2} = \lambda_1 + \sum_{n} \phi_{n,t}
-\phi_{n,t} \prop \text{exp}(S_t)
+\phi_{n,t} \propto \text{exp}(S_t)
 $$
 
 for $$t\in \{1,\ldots,T}, n\in \{1,\ldots, N\}$$, where
