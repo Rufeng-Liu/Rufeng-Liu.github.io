@@ -69,4 +69,5 @@ The interpretations of the resulting distributions will be different because the
 ## Bayesian infinitesimal jackknife
 
 The [Bayesian （first-order） infinitesimal jackknife](https://rgiordan.github.io/posts/2020-08-09-bayes_ij.html) is introduced by [Ryan Giordano](https://statistics.berkeley.edu/people/ryan-giordano-0).
+
 ---
