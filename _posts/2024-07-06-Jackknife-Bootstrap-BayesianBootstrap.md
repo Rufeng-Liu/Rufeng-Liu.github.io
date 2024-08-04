@@ -17,7 +17,8 @@ toc:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
   - name: Bayesian Bootstrap
-    
+  - name: Bayesian infinitesimal jackknife
+
 _styles: >
   .fake-img {
     background: #Bayesian bootstrapb;
@@ -65,4 +66,7 @@ Each Bayesian bootstrap replication generates a posterior probability for each $
 
 The interpretations of the resulting distributions will be different because the Bayesian bootstrap simulates the posterior distribution of the parameter $$\phi$$, whereas the bootstrap simulates the estimated sampling distribution of a statistic $$\hat{\phi}$$ estimating $$\phi$$. The Bayesian bootstrap has an inherent advantage over the bootstrap with respect to the resulting inferences about parameters: the Bayesian bootstrap generates likelihood statements about parameters rather than frequency statements about statistics under assumed values for parameters.
 
+## Bayesian infinitesimal jackknife
+
+The [Bayesian （first-order） infinitesimal jackknife](https://rgiordan.github.io/posts/2020-08-09-bayes_ij.html) is introduced by [Ryan Giordano](https://statistics.berkeley.edu/people/ryan-giordano-0).
 ---
