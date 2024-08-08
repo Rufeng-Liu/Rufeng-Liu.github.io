@@ -5,7 +5,6 @@ description: Sampling weights
 tags: sample methods
 giscus_comments: false
 date: 2024-07-16
-featured: true
 
 bibliography: 2024-07-16-sampling-weights.bib
 
