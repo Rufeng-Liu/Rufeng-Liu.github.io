@@ -5,7 +5,6 @@ description: Bootstrap
 tags: Resampling
 giscus_comments: false
 date: 2024-07-06
-featured: true
 
 bibliography: 2024-07-06-Jackknife-Bootstrap-BayesianBootstrap.bib
 
