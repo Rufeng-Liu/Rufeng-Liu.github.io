@@ -5,7 +5,7 @@ description: Scalability
 tags: Scalability
 giscus_comments: false
 date: 2023-09-01
-featured: true
+
 
 bibliography:
 
