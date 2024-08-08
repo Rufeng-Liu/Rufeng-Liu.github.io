@@ -2,7 +2,7 @@
 layout: distill
 title: Horseshoe estimator
 description: Horseshoe for sparsity
-tags: Bayesian-model/variable-selection Horseshoe
+tags: Bayesian-model/variable-selection Horseshoe sparsity
 giscus_comments: false
 date: 2024-07-09
 featured: true
