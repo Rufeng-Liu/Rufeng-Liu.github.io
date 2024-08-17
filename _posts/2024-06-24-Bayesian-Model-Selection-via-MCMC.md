@@ -16,7 +16,9 @@ toc:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
   - name: Implementation 
-
+    subsections:
+       - name: Example
+       - name: In project
 _styles: >
   .fake-img {
     background: #bbb;
@@ -96,6 +98,8 @@ If for a particular data set one of the $$p(M=j\mid \boldsymbol{y})$$ is extreme
 
 Key point: Use the data to help to select the `pseudopriors` but `not` the prior, match the `pseudopriors` as nearly as possible to the true model-specific posteriors. 
 
+### Example 
 
+### In project
 
 ---
