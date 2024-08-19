@@ -99,7 +99,7 @@ If for a particular data set one of the $$p(M=j\mid \boldsymbol{y})$$ is extreme
 Key point: Use the data to help to select the `pseudopriors` but `not` the prior, match the `pseudopriors` as nearly as possible to the true model-specific posteriors. 
 
 ### Example 
-
+Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \{-\infty,\infty\}$$. 
 ### In project
 
 ---
