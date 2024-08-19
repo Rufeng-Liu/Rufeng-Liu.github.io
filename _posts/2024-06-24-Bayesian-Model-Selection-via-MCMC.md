@@ -90,7 +90,7 @@ between any two of the models.
 --- 
 ## Implementation 
 
-Citation <d-cite key="carlin1995bayesian"></d-cite> <d-cite key="jauch2021mixture"></d-cite>.
+Citation <d-cite key="carlin1995bayesian"></d-cite>.
 
 Poor choices of the linking density (`pseudopriors`) $$p(\boldsymbol{\theta}_j\mid M\neq j)$$ will make jumps between models extremely unlikely, so that the convergence of the Gibbs sampling may trapped to one model, which might not be the true one in fact. Good choices will produce $$\boldsymbol{\theta}_j^{(g)}$$-values that are consistent with the data, so that $$p(M=j\mid \boldsymbol{\theta},\boldsymbol{y})$$ will still be reasonably large at the next $$M$$ update step. 
 
@@ -99,7 +99,10 @@ If for a particular data set one of the $$p(M=j\mid \boldsymbol{y})$$ is extreme
 Key point: Use the data to help to select the `pseudopriors` but `not` the prior, match the `pseudopriors` as nearly as possible to the true model-specific posteriors. 
 
 ### Example 
-Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \{-\infty,\infty\}$. 
+
+Citation <d-cite key="jauch2021mixture"></d-cite>.
+Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace}$. Suppose $f$ and $g$ are density functions with $$\int_{I}f(x)dx=1, \int_{I}g(x)dx=1$$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. 
+
 ### In project
 
 ---
