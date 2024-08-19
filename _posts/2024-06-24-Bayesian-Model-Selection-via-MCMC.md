@@ -102,7 +102,7 @@ Key point: Use the data to help to select the `pseudopriors` but `not` the prior
 
 Citation <d-cite key="jauch2021mixture"></d-cite>.
 
-Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace$. Suppose $f$ and $g$ are density functions with $\int_{I}f(x)dx=1$, $\int_{I}g(x)dx=1$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. For each $s\in I$, let $g^s$ denote the truncated density function with $g^s(x)=g(x)\mathbf{1}_{(-\infty,s]}(x)/G(s)$ for $x\in I$.
+Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace$. Suppose $f$ and $g$ are density functions with $\int_{I}f(x)dx=1$, $\int_{I}g(x)dx=1$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. For each $s\in I$, let $g^s$ denote the truncated density function with $g^s(x)=g(x)\mathbf{1}_{(-\infty,s]}(x)/G(s)$ for $x\in I$. We say that $F$ is smaller than $G$ in the likelihood ratio order, denote $F\leq_{LR} G$, if $f/g$ is monotone non-increasing.
 
 ### In project
 
