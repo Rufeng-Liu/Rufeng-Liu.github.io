@@ -101,7 +101,7 @@ Key point: Use the data to help to select the `pseudopriors` but `not` the prior
 ### Example 
 
 Citation <d-cite key="jauch2021mixture"></d-cite>.
-Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace}$. Suppose $f$ and $g$ are density functions with $$\int_{I}f(x)dx=1, \int_{I}g(x)dx=1$$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. 
+Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace$. Suppose $f$ and $g$ are density functions with $$\int_{I}f(x)dx=1, \int_{I}g(x)dx=1$$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. 
 
 ### In project
 
