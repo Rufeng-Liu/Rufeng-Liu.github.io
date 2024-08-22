@@ -104,9 +104,9 @@ Citation <d-cite key="jauch2021mixture"></d-cite>.
 
 Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace$. Suppose $f$ and $g$ are density functions with $\int_{I}f(x)dx=1$, $\int_{I}g(x)dx=1$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. For each $s\in I$, let $g^s$ denote the truncated density function with $g^s(x)=g(x)\mathbf{1}_ {(-\infty,s]}(x)/G(s)$ for $x\in I$. We say that $F$ is smaller than $G$ in the likelihood ratio order, denote $F\leq_{LR} G$, if $f/g$ is monotone non-increasing. It is shown that, $f/g$ is monotone non-increasing and locally absolutely continuous on $I$ if and only if there exists $\theta \in \lbrack 0,1 \rbrack$ and an absolutely continuous distribution function $U$ with $U(a+)=0$ and $U(b-)=1$ such that for $x\in I$, 
 
-$
+$$
 f(x)=\theta g(x) + (1-\theta) \int_{a}^{b} g^{s}(x)U'(s)ds
-$
+$$
 
 When this mixture representation exists, $\theta=\lim_{x\uparrow b} f(x)/g(x)$, if $\theta\in[0,1)$, $U$ is uniquely determined with $U(x)=\frac{G(x)}{1-\theta}\lbrace \frac{F(x)}{G(x)}-\frac{f(x)}{g(x)} \rbrace$, $x\in I$. Choosing a spike-and-slab prior that assigns positive probability to the event $\theta=1$ enable us to do model selection, using the posterior probability of $H_0: F=G$, equivalent to $\theta=1$, versus $H_1: F\leq_{LR} G$, equivalent to $\theta\in[0,1)$. 
 
