@@ -108,7 +108,13 @@ $$
 f(x)=\theta g(x) + (1-\theta) \int_{a}^{b} g^{s}(x)U'(s)ds
 $$
 
-When this mixture representation exists, $\theta=\lim_{x\uparrow b} f(x)/g(x)$, if $\theta\in[0,1)$, $U$ is uniquely determined with $U(x)=\frac{G(x)}{1-\theta}\lbrace \frac{F(x)}{G(x)}-\frac{f(x)}{g(x)} \rbrace$, $x\in I$. Choosing a spike-and-slab prior that assigns positive probability to the event $\theta=1$ enable us to do model selection, using the posterior probability of $H_0: F=G$, equivalent to $\theta=1$, versus $H_1: F\leq_{LR} G$, equivalent to $\theta\in[0,1)$. 
+When this mixture representation exists, $\theta=\lim_{x\uparrow b} f(x)/g(x)$, if $\theta\in[0,1)$, $U$ is uniquely determined with $U(x)=\frac{G(x)}{1-\theta}\lbrace \frac{F(x)}{G(x)}-\frac{f(x)}{g(x)} \rbrace$, $x\in I$. 
+
+Choosing a spike-and-slab prior that assigns positive probability to the event $\theta=1$ enable us to do model selection, using the posterior probability of $H_0: F=G$, equivalent to $\theta=1$, versus $H_1: F\leq_{LR} G$, equivalent to $\theta\in[0,1)$. Setting $\theta=(1-\gamma)\tilde{\theta}+\gamma$, $H_0: F=G$ and $H_1: F\leq_{LR} G$ can be identified with the events $\gamma=1$ and $\gamma=0$, respectively. The density of $F$ can be expressed as
+
+$$
+
+$$
 
 ### In project
 
