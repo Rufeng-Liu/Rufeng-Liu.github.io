@@ -119,8 +119,8 @@ Choosing a spike-and-slab prior that assigns positive probability to the event $
 
 $$
 \begin{aligned}
-g(\cdot\mid P_1) &= \
-u(\cdot\mid P_2) &= 
+g(\cdot\mid P_1) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdots) P_1(d\mu,d\sigma^2), P_1\sim \mathrm{DP}(P_{1,0}, \alpha_1) \\
+u(\cdot\mid P_2) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdots) P_2(d\mu,d\sigma^2), P_2\sim \mathrm{DP}(P_{2,0}, \alpha_2)
 \end{aligned} 
 $$
 
