@@ -144,7 +144,7 @@ the joint distribution of the data and parameters is given by
 
 $$
 \begin{aligned}
-
+X_i \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2 & \stackrel{ind}{\sim} f(\cdot \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2), \quad i\in \lbrace 1,\ldots, n \rbrace
 \end{aligned} 
 $$
 
