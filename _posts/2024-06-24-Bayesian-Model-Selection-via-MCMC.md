@@ -110,19 +110,27 @@ $$
 
 When this mixture representation exists, $\theta=\lim_{x\uparrow b} f(x)/g(x)$, if $\theta\in[0,1)$, $U$ is uniquely determined with $U(x)=\frac{G(x)}{1-\theta}\lbrace \frac{F(x)}{G(x)}-\frac{f(x)}{g(x)} \rbrace$, $x\in I$. 
 
-If we have $I=\mathbf{R}$, densities $g$ and $u$ can be easily modeled using DP mixtures together with a Gaussian kernel $\phi_{\mu,\sigma^2}$,
+If we have $I=\mathbf{R}$, densities $g$ and $u$ can be easily modeled using DP mixtures $\mathrm{DP}(P_0,\alpha)$ together with a Gaussian kernel $\phi_{\mu,\sigma^2}$,
 
 $$
+\begin{aligned}
+g(\cdot\mid P_1) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdot) P_1(d\mu,d\sigma^2), \quad P_1\sim \mathrm{DP}(P_{1,0}, \alpha_1) \\
+u(\cdot\mid P_2) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdot) P_2(d\mu,d\sigma^2), \quad P_2\sim \mathrm{DP}(P_{2,0}, \alpha_2)
+\end{aligned} 
+$$
+
+Under the truncated stick-breaking representation of DP, $P_k(\cdot)=\sum_{j=1}^{N} v_{k,j} \lbrace \prod_{l=1}^{j-1} (1-v_{k,l}) \rbrace \delta_{\mu_{k,j}, \sigma_{k,j}^2} (\cdot)$, $k\in \lbrace 1,2 \rbrace$, where the truncation level $N$ is fixed, $v_{k,j}$ are independent beta random variables for each $j\in \lbrace 1,\ldots, N-1 \rbrace$ with $v_{k,N}=1$, and the atoms $(\mu_{k,j}, \sigma_{k,j}^2)^T$ are independent random vectors distributed according to the base measure $P_{0,k}$. Let $\vec{v}_ k=(v_{k,1}, \ldots, v_{k,N-1})^T$, $\vec{\mu}_ k=(\mu_{k,1}, \ldots, \mu_{k,N-1})^T$, $\vec{\sigma}_ k ^2=(\sigma_{k,1}^2, \ldots, \sigma_{k,N-1}^2)^T$, the densities of $G$ and $U$ are
+
+$$
+
 $$
 
 Choosing a spike-and-slab prior that assigns positive probability to the event $\theta=1$ enable us to do model selection, using the posterior probability of $H_0: F=G$, equivalent to $\theta=1$, versus $H_1: F\leq_{LR} G$, equivalent to $\theta\in[0,1)$. Setting $\theta=(1-\gamma)\tilde{\theta}+\gamma$, $H_0: F=G$ and $H_1: F\leq_{LR} G$ can be identified with the events $\gamma=1$ and $\gamma=0$, respectively. The density of $F$ can be expressed as
 
 $$
-\begin{aligned}
-g(\cdot\mid P_1) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdots) P_1(d\mu,d\sigma^2), P_1\sim \mathrm{DP}(P_{1,0}, \alpha_1) \\
-u(\cdot\mid P_2) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdots) P_2(d\mu,d\sigma^2), P_2\sim \mathrm{DP}(P_{2,0}, \alpha_2)
-\end{aligned} 
+
 $$
+
 
 ### In project
 
