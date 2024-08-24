@@ -120,6 +120,7 @@ u(\cdot\mid P_2) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\
 $$
 
 Under the truncated stick-breaking representation of DP, 
+
 $$
 P_k(\cdot)=\sum_{j=1}^{N} v_{k,j} \lbrace \prod_{l=1}^{j-1} (1-v_{k,l}) \rbrace \delta_{\mu_{k,j}, \sigma_{k,j}^2} (\cdot), \quad k\in \lbrace 1,2 \rbrace
 $$
