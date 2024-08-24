@@ -122,7 +122,7 @@ $$
 Under the truncated stick-breaking representation of DP, 
 
 $$
-P_k(\cdot)=\sum_{j=1}^{N} v_{k,j} \lbrace \prod_{l=1}^{j-1} (1-v_{k,l}) \rbrace \delta_{\mu_{k,j}, \sigma_{k,j}^2} (\cdot), \quad k\in \lbrace 1,2 \rbrace
+P_k(\cdot)=\sum_{j=1}^{N} v_{k,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{k,l}) \right\rbrace \delta_{\mu_{k,j}, \sigma_{k,j}^2} (\cdot), \quad k\in \lbrace 1,2 \rbrace
 $$
 
 where the truncation level $N$ is fixed, $v_{k,j}$ are independent beta random variables for each $j\in \lbrace 1,\ldots, N-1 \rbrace$ with $v_{k,N}=1$, and the atoms $(\mu_{k,j}, \sigma_{k,j}^2)^T$ are independent random vectors distributed according to the base measure $P_{0,k}$. Let $\vec{v}_ k=(v_{k,1}, \ldots, v_{k,N-1})^T$, $\vec{\mu}_ k=(\mu_{k,1}, \ldots, \mu_{k,N-1})^T$, $\vec{\sigma}_ k ^2=(\sigma_{k,1}^2, \ldots, \sigma_{k,N-1}^2)^T$, the densities of $G$ and $U$ are
