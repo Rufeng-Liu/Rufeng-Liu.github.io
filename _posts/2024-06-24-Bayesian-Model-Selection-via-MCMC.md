@@ -125,10 +125,13 @@ $$
 P_k(\cdot)=\sum_{j=1}^{N} v_{k,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{k,l}) \right\rbrace \delta_{\mu_{k,j}, \sigma_{k,j}^2} (\cdot), \quad k\in \lbrace 1,2 \rbrace
 $$
 
-where the truncation level $N$ is fixed, $v_{k,j}$ are independent beta random variables for each $j\in \lbrace 1,\ldots, N-1 \rbrace$ with $v_{k,N}=1$, and the atoms $(\mu_{k,j}, \sigma_{k,j}^2)^T$ are independent random vectors distributed according to the base measure $P_{0,k}$. Let $\vec{v}_ k=(v_{k,1}, \ldots, v_{k,N-1})^T$, $\vec{\mu}_ k=(\mu_{k,1}, \ldots, \mu_{k,N-1})^T$, $\vec{\sigma}_ k ^2=(\sigma_{k,1}^2, \ldots, \sigma_{k,N-1}^2)^T$, the densities of $G$ and $U$ are
+where the truncation level $N$ is fixed, $v_{k,j}$ are independent beta random variables for each $j\in \lbrace 1,\ldots, N-1 \rbrace$ with $v_{k,N}=1$, and the atoms $(\mu_{k,j}, \sigma_{k,j}^2)^T$ are independent random vectors distributed according to the base measure $P_{0,k}$. Let $\vec{v}_ k=(v_{k,1}, \ldots, v_{k,N-1})^T$, $\vec{\mu}_ k=(\mu_{k,1}, \ldots, \mu_{k,N})^T$, $\vec{\sigma}_ k ^2=(\sigma_{k,1}^2, \ldots, \sigma_{k,N}^2)^T$, the densities of $G$ and $U$ are
 
 $$
-
+\begin{aligned}
+g(x\mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) &= \sum_{j=1}^{N} v_{1,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{1,l}) \right\rbrace \delta_{\mu_{1,j}, \sigma_{1,j}^2} (x) \\
+u(x\mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) &= \sum_{j=1}^{N} v_{2,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{2,l}) \right\rbrace \delta_{\mu_{2,j}, \sigma_{2,j}^2} (x)
+\end{aligned} 
 $$
 
 Choosing a spike-and-slab prior that assigns positive probability to the event $\theta=1$ enable us to do model selection, using the posterior probability of $H_0: F=G$, equivalent to $\theta=1$, versus $H_1: F\leq_{LR} G$, equivalent to $\theta\in[0,1)$. Setting $\theta=(1-\gamma)\tilde{\theta}+\gamma$, $H_0: F=G$ and $H_1: F\leq_{LR} G$ can be identified with the events $\gamma=1$ and $\gamma=0$, respectively. The density of $F$ can be expressed as
