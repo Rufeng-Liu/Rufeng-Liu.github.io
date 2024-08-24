@@ -129,17 +129,24 @@ where the truncation level $N$ is fixed, $v_{k,j}$ are independent beta random v
 
 $$
 \begin{aligned}
-g(x\mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) &= \sum_{j=1}^{N} v_{1,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{1,l}) \right\rbrace \delta_{\mu_{1,j}, \sigma_{1,j}^2} (x) \\
-u(x\mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) &= \sum_{j=1}^{N} v_{2,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{2,l}) \right\rbrace \delta_{\mu_{2,j}, \sigma_{2,j}^2} (x)
+g(x \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) &= \sum_{j=1}^{N} v_{1,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{1,l}) \right\rbrace \delta_{\mu_{1,j}, \sigma_{1,j}^2} (x) \\
+u(x \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) &= \sum_{j=1}^{N} v_{2,j} \left\lbrace \prod_{l=1}^{j-1} (1-v_{2,l}) \right\rbrace \delta_{\mu_{2,j}, \sigma_{2,j}^2} (x)
 \end{aligned} 
 $$
 
 Choosing a spike-and-slab prior that assigns positive probability to the event $\theta=1$ enable us to do model selection, using the posterior probability of $H_0: F=G$, equivalent to $\theta=1$, versus $H_1: F\leq_{LR} G$, equivalent to $\theta\in[0,1)$. Setting $\theta=(1-\gamma)\tilde{\theta}+\gamma$, $H_0: F=G$ and $H_1: F\leq_{LR} G$ can be identified with the events $\gamma=1$ and $\gamma=0$, respectively. The density of $F$ can be expressed as
 
 $$
-
+f(x \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) = \theta g(x \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) + (1-\theta) \int_{-\infty}^{\infty} g^{s}(x \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)u(s \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)ds
 $$
 
+the joint distribution of the data and parameters is given by
+
+$$
+\begin{aligned}
+
+\end{aligned} 
+$$
 
 ### In project
 
