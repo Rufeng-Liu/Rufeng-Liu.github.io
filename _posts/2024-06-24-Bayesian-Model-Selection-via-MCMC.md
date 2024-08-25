@@ -161,7 +161,7 @@ $$
 The density of $\mathrm{Normal\space Inv-Gamma}(m,c,a_1,a_2)$ is 
 
 $$
-\pi_{\mathrm{NI}}(\mu,\sigma^2 \mid m,c,a_1,a_2) = \frac{\sqrt{c}}{\sigma\sqrt{2\pi}}\frac{a_2^{a_1}}{\Gamma(a_1)}(\frac{1}{sigma^2})^{a_1+1} \mathrm{exp}(-\frac{2a_2+c(\mu-m)^2}{2\sigma^2})
+\pi_{\mathrm{NI}}(\mu,\sigma^2 \mid m,c,a_1,a_2) = \frac{\sqrt{c}}{\sigma\sqrt{2\pi}}\frac{a_2^{a_1}}{\Gamma(a_1)}(\frac{1}{\sigma^2})^{a_1+1} \mathrm{exp}(-\frac{2a_2+c(\mu-m)^2}{2\sigma^2})
 $$
 
 The density of $\mathrm{Beta}(b_1,b_2)$ is 
