@@ -150,12 +150,24 @@ v_{1,j} & \stackrel{ind}{\sim} \mathrm{Beta}(1,\alpha), \quad j\in \lbrace 1,\ld
 (\mu_{1,j}, \sigma_{1,j}^2)^T & \stackrel{ind}{\sim} \mathrm{Normal\space Inv-Gamma}(m,c,a_1,a_2), \quad j\in \lbrace 1,\ldots, N \rbrace \\
 \tilde{\theta} \mid \gamma = 0 & \sim \mathrm{Beta}(b_1,b_2) \\
 v_{2,j} \mid \gamma = 0 & \stackrel{ind}{\sim} \mathrm{Beta}(1,\alpha), \quad j\in \lbrace 1,\ldots, N-1 \rbrace \\
-(\mu_{2,j}, \sigma_{2,j}^2)^T \mid \gamma = 0 & \stackrel{ind}{\sim} \mathrm{Normal-Inv-Gamma}(m,c,a_1,a_2), \quad j\in \lbrace 1,\ldots, N \rbrace \\
+(\mu_{2,j}, \sigma_{2,j}^2)^T \mid \gamma = 0 & \stackrel{ind}{\sim} \mathrm{Normal\space Inv-Gamma}(m,c,a_1,a_2), \quad j\in \lbrace 1,\ldots, N \rbrace \\
 \tilde{\theta} \mid \gamma = 1 & \sim \mathrm{Beta}(\breve{b_1},\breve{b_2}) \\
 v_{2,j} \mid \gamma = 1 & \stackrel{ind}{\sim} \mathrm{Beta}(1,\breve{\alpha}), \quad j\in \lbrace 1,\ldots, N-1 \rbrace \\
 (\mu_{2,j}, \sigma_{2,j}^2)^T \mid \gamma = 1 & \stackrel{ind}{\sim} \breve{p}_{2,0}(\cdot), \quad j\in \lbrace 1,\ldots, N \rbrace \\
 \gamma & \sim \mathrm{Bernoulli}(p_0)
 \end{aligned} 
+$$
+
+The density of $\mathrm{Normal\space Inv-Gamma}(m,c,a_1,a_2)$ is 
+
+$$
+
+$$
+
+The density of $\mathrm{Beta}(b_1,b_2)$ is 
+
+$$
+
 $$
 
 ### In project
