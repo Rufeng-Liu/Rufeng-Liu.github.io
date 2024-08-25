@@ -170,6 +170,10 @@ $$
 \pi_{\mathrm{Beta}}(v \mid b_1, b_2) = \frac{\Gamma(b_1+b_2)}{\Gamma(b_1)\Gamma(b_2)}v^{b_1-1}(1-v)^{b_2-1}
 $$
 
+The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ are defined conditionally on $\gamma$ for computational purposes. The priors given $\gamma = 1$ are `pseudopriors`. The full conditional distributions for the slice-within-Gibbs sampler are given,
+
+
+
 ### In project
 
 ---
