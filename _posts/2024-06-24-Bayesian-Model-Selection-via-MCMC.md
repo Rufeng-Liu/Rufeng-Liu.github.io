@@ -144,7 +144,12 @@ the joint distribution of the data and parameters is given by
 
 $$
 \begin{aligned}
-X_i \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2 & \stackrel{ind}{\sim} f(\cdot \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2), \quad i\in \lbrace 1,\ldots, n \rbrace
+X_i \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2 & \stackrel{ind}{\sim} f(\cdot \mid \gamma, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2), \quad i\in \lbrace 1,\ldots, n \rbrace \\
+Y_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2 & \stackrel{ind}{\sim} g(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2), \quad i\in \lbrace 1,\ldots, m \rbrace \\
+v_{1,j} & \stackrel{ind}{\sim} \mathrm{Beta}(1,\alpha), \quad j\in \lbrace 1,\ldots, N-1 \rbrace \\
+(\mu_{1,j}, \sigma_{1,j}^2)^T & \stackrel{ind}{\sim} \mathrm{Normal Inv-Gamma}(m,c,a_1,a_2), \quad j\in \lbrace 1,\ldots, N \rbrace \\
+\tilde{\theta} \mid \gamma = 0 & \sim \mathrm{Beta}(b_1,b_2) \\
+\
 \end{aligned} 
 $$
 
