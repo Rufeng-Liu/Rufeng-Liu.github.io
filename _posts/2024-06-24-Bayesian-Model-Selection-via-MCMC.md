@@ -173,6 +173,11 @@ $$
 The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ are defined conditionally on $\gamma$ for computational purposes. The priors given $\gamma = 1$ are `pseudopriors`. The full conditional distributions for the slice-within-Gibbs sampler are given, with a dash as shorthand notation, 
 
 1. Update $(\vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)^T$.
+   
+   $$
+   1
+   $$
+
 
 2. Update $(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$.
    (1)
