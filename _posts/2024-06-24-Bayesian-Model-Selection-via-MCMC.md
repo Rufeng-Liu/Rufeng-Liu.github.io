@@ -190,7 +190,7 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
 
 2. Update $(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$.
    
-   (1) If $\gamma = 0$, 
+   (1) If $\gamma = 0$, the conditional density
    
     $$
    \begin{aligned}
@@ -198,20 +198,41 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    \end{aligned}
    $$ 
    
-   (2) If $\gamma = 1$,
+   (2) If $\gamma = 1$, sample
 
    $$
    \begin{aligned}
-   v_{2,j} \mid \gamma = 1, -  & \stackrel{ind}{\sim} \mathrm{Beta}(1,\breve{\alpha}), \quad j\in \lbrace 1,\ldots, N-1 \rbrace \\
-(\mu_{2,j}, \sigma_{2,j}^2)^T \mid \gamma = 1, - & \stackrel{ind}{\sim} \breve{p}_{2,0}(\cdot), \quad j\in \lbrace 1,\ldots, N \rbrace
+   v_{2,j} \mid \gamma = 1, -  & {\sim} \mathrm{Beta}(1,\breve{\alpha}), \quad j\in \lbrace 1,\ldots, N-1 \rbrace \\
+(\mu_{2,j}, \sigma_{2,j}^2)^T \mid \gamma = 1, - & {\sim} \breve{p}_{2,0}(\cdot), \quad j\in \lbrace 1,\ldots, N \rbrace
    \end{aligned}
    $$ 
 
-3. Update $\tilde{\theta}$.
+3. Update $\tilde{\theta}$. For each $i \in \lbrace 1,\ldots,n \rbrace$, a latent variable $R_i$ that associates $X_i$ with one of the two components in the mixture representation is introduced, 
+
+
+
+
+
+
+
+
+
+
 
 
 
 4. Update $\gamma$.
+
+
+
+
+
+
+
+
+
+
+
 
 ### In project
 
