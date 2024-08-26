@@ -190,9 +190,22 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
 
 2. Update $(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$.
    
-   (1)
+   (1) If $\gamma = 0$, 
    
-   (2)
+    $$
+   \begin{aligned}
+   \pi(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2 \mid \gamma = 0, -) & \propto \left\lbrace \prod_{i=1}^{n} f(X_i \mid \gamma = 0, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) \right\rbrace \\ & \times \left\lbrace \prod_{j=1}^{N} \pi_{\mathrm{NI}}(\mu_{2,j}, \sigma_{2,j} ^2 \mid m,c,a_1,a_2) \right\rbrace \times \left\lbrace \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{2,j} \mid 1,\breve{\alpha}) \right\rbrace
+   \end{aligned}
+   $$ 
+   
+   (2) If $\gamma = 1$,
+
+   $$
+   \begin{aligned}
+   v_{2,j} \mid \gamma = 1, -  & \stackrel{ind}{\sim} \mathrm{Beta}(1,\breve{\alpha}), \quad j\in \lbrace 1,\ldots, N-1 \rbrace \\
+(\mu_{2,j}, \sigma_{2,j}^2)^T \mid \gamma = 1, - & \stackrel{ind}{\sim} \breve{p}_{2,0}(\cdot), \quad j\in \lbrace 1,\ldots, N \rbrace
+   \end{aligned}
+   $$ 
 
 3. Update $\tilde{\theta}$.
 
