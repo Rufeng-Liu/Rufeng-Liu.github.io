@@ -186,17 +186,17 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    \end{aligned}
    $$
 
-3. Update $(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$.
+2. Update $(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$.
    
    (1)
    
    (2)
 
-4. Update $\tilde{\theta}$.
+3. Update $\tilde{\theta}$.
 
 
 
-5. Update $\gamma$.
+4. Update $\gamma$.
 
 ### In project
 
