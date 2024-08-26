@@ -175,7 +175,7 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
 1. Update $(\vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)^T$.
    
    $$
-   1
+   \pi(\vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2 \mid \gamma = 0, -) \propto \left\lbrace \prod_{i=1}^{n} f(X_i \mid \gamma = 0, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) \right\rbrace \times \left\lbrace \prod_{i=1}^{m} g(Y_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) \right\rbrace \times \left\lbrace \prod_{j=1}^{N} \pi_{\mathrm{NI}}(\mu_{1,j}, \sigma_{1,j} ^2 \mid m,c,a_1,a_2) \right\rbrace \times \left\lbrace  \right\rbrace \left\lbrace \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{1,j} \mid b_1, b_2) \right\rbrace
    $$
 
    $$
