@@ -213,9 +213,9 @@ $$
 \begin{aligned}
 X_i \mid R_i = 1, \gamma \in \lbrace 0,1 \rbrace, - & \sim g(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) \\
 X_i \mid R_i = 0, \gamma = 0, - & \sim \int_{-\infty}^{\infty} g^{s}(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)u(s \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)ds \\
-R_i \ mid \gamma = 0 & \sim \mathrm{Bernoulli}(\tilde{\theta}) \\
+R_i \mid \gamma = 0 & \sim \mathrm{Bernoulli}(\tilde{\theta}) \\
 \tilde{\theta} \mid \gamma = 0 & \sim \mathrm{Beta}(b_1,b_2) \\
-R_i \ mid \gamma = 1 & \sim \delta_1(\cdot) \\
+R_i \mid \gamma = 1 & \sim \delta_1(\cdot) \\
 \tilde{\theta} \mid \gamma = 1 & \sim \mathrm{Beta}(\breve{b_1},\breve{b_2})
 \end{aligned} 
 $$
