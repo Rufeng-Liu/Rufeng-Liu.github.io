@@ -178,6 +178,9 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    1
    $$
 
+   $$
+   2
+   $$
 
 2. Update $(\vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$.
    
