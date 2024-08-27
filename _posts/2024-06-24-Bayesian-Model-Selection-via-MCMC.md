@@ -257,9 +257,25 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    $$
 
 
-`pseudopriors` (conditional on $\gamma = 1$) $\mathrm{Beta}(\breve{b}_ 1, \breve{b}_ 2)$, $\mathrm{Beta}(1,\breve{\alpha})$ and $\breve{p}_ {2,0}(\cdot)$ are defined to resemble the posterior distribution of $\tilde{\theta}$, $\vec{v}_ 2$, and $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$ conditional on $\gamma = 0$.
+`pseudopriors` (conditional on $\gamma = 1$) $\mathrm{Beta}(\breve{b}_ 1, \breve{b}_ 2)$, $\mathrm{Beta}(1,\breve{\alpha})$ and $\breve{p}_ {2,0}(\cdot)$ are defined to resemble the posterior distribution of $\tilde{\theta}$, $\vec{v}_ 2$, and $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$ conditional on $\gamma = 0$. First, fix $\gamma = 0$ and run first three steps in a sampler for $Q$ iterations, the Markov chain output $(\tilde{\theta}_ {(1)}, \vec{v}_ {2,(1)}, \vec{\mu}_ {2,(1)}, \vec{\sigma}_ {2,(1)} ^2)^T, \ldots, (\tilde{\theta}_ {(Q)}, \vec{v}_ {2,(Q)}, \vec{\mu}_ {2,(Q)}, \vec{\sigma}_ {2,(Q)} ^2)^T$ provides an approximation of the posterior distribution of $\tilde{\theta}$, $\vec{v}_ 2$, and $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$ conditional on $\gamma = 0$. Then we use the Markvo chain output to determine the `pseudopriors`. 
 
+For the `pseudopriors` of $\tilde{\theta}$,
 
+$$
+(\breve{b}_ 1, \breve{b}_ 2) = \argmax_{(a,b)} \prod_{q=1}^{Q} \pi_{\mathrm{Beta}}(\tilde{\theta}_{(q)} \mid a, b)
+$$
+
+For the `pseudopriors` of $\vec{v}_ 2$,
+
+$$
+\breve{\alpha} = \frac{1}{Q}\sum_{q=1}^{Q}\argmax_{a} \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{2,j(q)} \mid 1, a)
+$$
+
+For the `pseudopriors` of $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$,
+
+$$
+
+$$
 
 
 
