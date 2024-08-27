@@ -207,7 +207,7 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    \end{aligned}
    $$ 
 
-3. Update $\tilde{\theta}$. For each $i \in \lbrace 1,\ldots,n \rbrace$, a latent variable $R_i$ that associates $X_i$ with one of the two components in the mixture representation is introduced, 
+3. Update $\tilde{\theta}$. For each $i \in \lbrace 1,\ldots,n \rbrace$, a latent variable $R_i$ that associates $X_i$ with one of the two components in the mixture representation is introduced,
 
 $$
 \begin{aligned}
@@ -219,6 +219,21 @@ R_i \mid \gamma = 1 & \sim \delta_1(\cdot) \\
 \tilde{\theta} \mid \gamma = 1 & \sim \mathrm{Beta}(\breve{b_1},\breve{b_2})
 \end{aligned} 
 $$
+
+As $\mathrm{Pr}(R_i = 0, \gamma = 1) = 0, $R_i$ is updated with
+
+$$
+\begin{aligned}
+$\mathrm{Pr}(R_i = 1 \mid \gamma = 0, -) &= \\
+$\mathrm{Pr}(R_i = 0 \mid \gamma = 0, -) &= \\
+$\mathrm{Pr}(R_i = 1 \mid \gamma = 1, -) &= 1
+\end{aligned} 
+$$
+
+
+
+
+
 
 4. Update $\gamma$.
 
