@@ -209,35 +209,36 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
 
 3. Update $\tilde{\theta}$. For each $i \in \lbrace 1,\ldots,n \rbrace$, a latent variable $R_i$ that associates $X_i$ with one of the two components in the mixture representation is introduced,
 
-$$
-\begin{aligned}
-X_i \mid R_i = 1, \gamma \in \lbrace 0,1 \rbrace, - & \sim g(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) \\
-X_i \mid R_i = 0, \gamma = 0, - & \sim \int_{-\infty}^{\infty} g^{s}(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)u(s \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)ds \\
-R_i \mid \gamma = 0 & \sim \mathrm{Bernoulli}(\tilde{\theta}) \\
-\tilde{\theta} \mid \gamma = 0 & \sim \mathrm{Beta}(b_1,b_2) \\
-R_i \mid \gamma = 1 & \sim \delta_1(\cdot) \\
-\tilde{\theta} \mid \gamma = 1 & \sim \mathrm{Beta}(\breve{b}_1,\breve{b}_2)
-\end{aligned} 
-$$
+   $$
+   \begin{aligned}
+   X_i \mid R_i = 1, \gamma \in \lbrace 0,1 \rbrace, - & \sim g(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) \\
+   X_i \mid R_i = 0, \gamma = 0, - & \sim \int_{-\infty}^{\infty} g^{s}(\cdot \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)u(s \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)ds \\
+   R_i \mid \gamma = 0 & \sim \mathrm{Bernoulli}(\tilde{\theta}) \\
+   \tilde{\theta} \mid \gamma = 0 & \sim \mathrm{Beta}(b_1,b_2) \\
+   R_i \mid \gamma = 1 & \sim \delta_1(\cdot) \\
+   \tilde{\theta} \mid \gamma = 1 & \sim \mathrm{Beta}(\breve{b}_1,\breve{b}_2)
+   \end{aligned} 
+   $$
 
-As $\mathrm{Pr}(R_i = 0, \gamma = 1) = 0, $R_i$ is updated with
+   As $\mathrm{Pr}(R_i = 0, \gamma = 1) = 0, $R_i$ is updated with
 
-$$
-\begin{aligned}
-\mathrm{Pr}(R_i = 1 \mid \gamma = 0, -) &= \frac{\tilde{\theta}g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)}{\tilde{\theta}g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) + (1-\tilde{\theta})\int_{-\infty}^{\infty} g^{s}(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)u(s \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)ds}\\
-\mathrm{Pr}(R_i = 0 \mid \gamma = 0, -) &= 1-\mathrm{Pr}(R_i = 1 \mid \gamma = 0, -)\\
-\mathrm{Pr}(R_i = 1 \mid \gamma = 1, -) &= 1
-\end{aligned} 
-$$
+   $$
+   \begin{aligned}
+   \mathrm{Pr}(R_i = 1 \mid \gamma = 0, -) &= \frac{\tilde{\theta}g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)}{\tilde{\theta}g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) + (1- 
+   \tilde{\theta})\int_{-\infty}^{\infty} g^{s}(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)u(s \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)ds}\\
+   \mathrm{Pr}(R_i = 0 \mid \gamma = 0, -) &= 1-\mathrm{Pr}(R_i = 1 \mid \gamma = 0, -)\\
+   \mathrm{Pr}(R_i = 1 \mid \gamma = 1, -) &= 1
+   \end{aligned} 
+   $$
 
-and $\tilde{\theta}$ is updated with
+   and $\tilde{\theta}$ is updated with
 
-$$
-\begin{aligned}
-\tilde{\theta} \mid \gamma = 0, - & \sim \mathrm{Beta}(b_1+\sum_{i=1}^{n}R_i, b_2+n-\sum_{i=1}^{n}R_i) \\
-\tilde{\theta} \mid \gamma = 1, - & \sim \mathrm{Beta}(\breve{b}_1,\breve{b}_2)
-\end{aligned}
-$$
+   $$
+   \begin{aligned}
+   \tilde{\theta} \mid \gamma = 0, - & \sim \mathrm{Beta}(b_1+\sum_{i=1}^{n}R_i, b_2+n-\sum_{i=1}^{n}R_i) \\
+   \tilde{\theta} \mid \gamma = 1, - & \sim \mathrm{Beta}(\breve{b}_1,\breve{b}_2)
+   \end{aligned}
+   $$
 
 4. Update $\gamma$.
 
