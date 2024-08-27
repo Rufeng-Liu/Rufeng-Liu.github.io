@@ -244,8 +244,8 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    
 $$
 \begin{aligned}
-\mathrm{Pr}(\gamma = 0 \mid -) & = \frac{}{\mathfrak{Z}_ {\gamma}}\\
-\mathrm{Pr}(\gamma = 1 \mid -) & = \frac{}{\mathfrak{Z}_ {\gamma}}\\
+\mathrm{Pr}(\gamma = 0 \mid -) & = \frac{}{\mathscr{Z}_ {\gamma}}\\
+\mathrm{Pr}(\gamma = 1 \mid -) & = \frac{}{\mathscr{Z}_ {\gamma}}\\
 \end{aligned}
 $$
 
