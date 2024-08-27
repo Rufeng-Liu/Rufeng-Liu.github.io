@@ -257,7 +257,7 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    $$
 
 
-`pseudopriors` $$, $$ and $$ are defined to resemble the posterior distribution of $$, $$, and $$ conditional on $\gamma = 1$. 
+`pseudopriors` $\mathrm{Beta}(\breve{b}_{1},\breve{b}_{2})$, $\mathrm{Beta}(1,\breve{\alpha})$ and $\breve{p}_{2,0}(\cdot)$ are defined to resemble the posterior distribution of $\tilde{\theta}$, $\vec{v}_ 2$, and $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$ conditional on $\gamma = 1$. 
 
 
 
