@@ -220,16 +220,6 @@ R_i \mid \gamma = 1 & \sim \delta_1(\cdot) \\
 \end{aligned} 
 $$
 
-
-
-
-
-
-
-
-
-
-
 4. Update $\gamma$.
 
 
