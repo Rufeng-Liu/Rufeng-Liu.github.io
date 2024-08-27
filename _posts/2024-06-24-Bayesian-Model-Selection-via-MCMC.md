@@ -220,7 +220,7 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    \end{aligned} 
    $$
 
-   As $\mathrm{Pr}(R_i = 0, \gamma = 1) = 0, $R_i$ is updated with
+   As $\mathrm{Pr}(R_i = 0, \gamma = 1) = 0$, $R_i$ is updated with
 
    $$
    \begin{aligned}
