@@ -240,14 +240,20 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    \end{aligned}
    $$
 
-4. Update $\gamma$.
+4. Update $\gamma$. The full conditional distribution for $\gamma$ is Bernoulli with
+   
+$$
+\begin{aligned}
+\mathrm{Pr}(\gamma = 0 \mid -) & = \frac{}{\mathfrak{Z}_ {\gamma}}\\
+\mathrm{Pr}(\gamma = 1 \mid -) & = \frac{}{\mathfrak{Z}_ {\gamma}}\\
+\end{aligned}
+$$
 
+where 
 
+$$
 
-
-
-
-
+$$
 
 
 
