@@ -244,15 +244,15 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
    
 $$
 \begin{aligned}
-\mathrm{Pr}(\gamma = 0 \mid -) & = \frac{(1-p_0) \prod_{i=1}^{n} f(X_i \mid \gamma = 0, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)}{\mathcal{Z}_ {\gamma}}\\
-\mathrm{Pr}(\gamma = 1 \mid -) & = \frac{p_0 \prod_{i=1}^{n} g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)}{\mathcal{Z}_ {\gamma}}\\
+\mathrm{Pr}(\gamma = 0 \mid -) & = \frac{(1-p_0) \prod_{i=1}^{n} f(X_i \mid \gamma = 0, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)}{\mathnormal{Z}_ {\gamma}}\\
+\mathrm{Pr}(\gamma = 1 \mid -) & = \frac{p_0 \prod_{i=1}^{n} g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2)}{\mathnormal{Z}_ {\gamma}}\\
 \end{aligned}
 $$
 
 where 
 
 $$
-
+\mathnormal{Z}_ {\gamma} = p_0 \prod_{i=1}^{n} g(X_i \mid \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2) + (1-p_0) \prod_{i=1}^{n} f(X_i \mid \gamma = 0, \tilde{\theta}, \vec{v}_ 1, \vec{\mu}_ 1, \vec{\sigma}_ 1 ^2, \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)
 $$
 
 
