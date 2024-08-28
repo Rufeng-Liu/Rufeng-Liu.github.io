@@ -277,16 +277,15 @@ $$
 (m_q,s_q^2) \sim u_{(q)}(\cdot \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) = \sum_{j=1}^{N} v_{2,j(q)} \left\lbrace \prod_{l=1}^{j-1} (1-v_{2,l(q)}) \right\rbrace \delta_{\mu_{2,j(q)}, \sigma_{2,j(q)}^2} (\cdot)
 $$
 
-
-
-
-
-
-
-
-
-
-
 ### In project
+
+To test the correlation between different components in different simplexes is equivalent to do model selection between these two models:
+
+1. Dependent simplexes:
+
+
+
+
+2. Independent simplexes:
 
 ---
