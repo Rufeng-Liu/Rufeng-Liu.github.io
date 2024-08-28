@@ -262,13 +262,13 @@ The priors for $\tilde{\theta}$, $v_{2,j}$, and $(\mu_{2,j}, \sigma_{2,j}^2)^T$ 
 For the `pseudopriors` of $\tilde{\theta}$,
 
 $$
-(\breve{b}_ 1, \breve{b}_ 2) = {\arg\max}_ {(a,b)} \prod_{q=1}^{Q} \pi_{\mathrm{Beta}}(\tilde{\theta}_{(q)} \mid a, b)
+(\breve{b}_ 1, \breve{b}_ 2) = \mathrm{argmax}_ {(a,b)} \prod_{q=1}^{Q} \pi_{\mathrm{Beta}}(\tilde{\theta}_{(q)} \mid a, b)
 $$
 
 For the `pseudopriors` of $\vec{v}_ 2$,
 
 $$
-\breve{\alpha} = \frac{1}{Q}\sum_{q=1}^{Q}\arg\max_{a} \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{2,j(q)} \mid 1, a)
+\breve{\alpha} = \frac{1}{Q}\sum_{q=1}^{Q}\mathrm{argmax}_{a} \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{2,j(q)} \mid 1, a)
 $$
 
 For the `pseudopriors` of $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$,
