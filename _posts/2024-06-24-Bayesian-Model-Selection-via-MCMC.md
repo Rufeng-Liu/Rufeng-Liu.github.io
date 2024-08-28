@@ -102,7 +102,7 @@ Key point: Use the data to help to select the `pseudopriors` but `not` the prior
 
 Citation <d-cite key="jauch2021mixture"></d-cite>.
 
-Let $I=(a,b)$ with $a,b\in \mathbf{R}\cup \lbrace -\infty,\infty \rbrace$. Suppose $f$ and $g$ are density functions with $\int_{I}f(x)dx=1$, $\int_{I}g(x)dx=1$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. For each $s\in I$, let $g^s$ denote the truncated density function with $g^s(x)=g(x)\mathbf{1}_ {(-\infty,s]}(x)/G(s)$ for $x\in I$. We say that $F$ is smaller than $G$ in the likelihood ratio order, denote $F\leq_{LR} G$, if $f/g$ is monotone non-increasing. It is shown that, $f/g$ is monotone non-increasing and locally absolutely continuous on $I$ if and only if there exists $\theta \in \lbrack 0,1 \rbrack$ and an absolutely continuous distribution function $U$ with density $u$, where $U(a+)=0$ and $U(b-)=1$ such that for $x\in I$, 
+Let $I=(a,b)$ with $a,b\in \mathbb{R}\cup \lbrace -\infty,\infty \rbrace$. Suppose $f$ and $g$ are density functions with $\int_{I}f(x)dx=1$, $\int_{I}g(x)dx=1$, and $g>0$ on $I$, with $F$ and $G$ be the corresponding distribution functions. For each $s\in I$, let $g^s$ denote the truncated density function with $g^s(x)=g(x)\mathbf{1}_ {(-\infty,s]}(x)/G(s)$ for $x\in I$. We say that $F$ is smaller than $G$ in the likelihood ratio order, denote $F\leq_{LR} G$, if $f/g$ is monotone non-increasing. It is shown that, $f/g$ is monotone non-increasing and locally absolutely continuous on $I$ if and only if there exists $\theta \in \lbrack 0,1 \rbrack$ and an absolutely continuous distribution function $U$ with density $u$, where $U(a+)=0$ and $U(b-)=1$ such that for $x\in I$, 
 
 $$
 f(x)=\theta g(x) + (1-\theta) \int_{a}^{b} g^{s}(x)u(s)ds
@@ -110,12 +110,12 @@ $$
 
 When this mixture representation exists, $\theta=\lim_{x\uparrow b} f(x)/g(x)$, if $\theta\in[0,1)$, $U$ is uniquely determined with $U(x)=\frac{G(x)}{1-\theta}\lbrace \frac{F(x)}{G(x)}-\frac{f(x)}{g(x)} \rbrace$, $x\in I$. 
 
-If we have $I=\mathbf{R}$, densities $g$ and $u$ can be easily modeled using DP mixtures $\mathrm{DP}(P_0,\alpha)$ together with a Gaussian kernel $\phi_{\mu,\sigma^2}$,
+If we have $I=\mathbb{R}$, densities $g$ and $u$ can be easily modeled using DP mixtures $\mathrm{DP}(P_0,\alpha)$ together with a Gaussian kernel $\phi_{\mu,\sigma^2}$,
 
 $$
 \begin{aligned}
-g(\cdot\mid P_1) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdot) P_1(d\mu,d\sigma^2), \quad P_1\sim \mathrm{DP}(P_{1,0}, \alpha_1) \\
-u(\cdot\mid P_2) &= \int_{\mathbf{R}\times \mathbf{R}^{+}} \phi_{\mu,\sigma^2}(\cdot) P_2(d\mu,d\sigma^2), \quad P_2\sim \mathrm{DP}(P_{2,0}, \alpha_2)
+g(\cdot\mid P_1) &= \int_{\mathbb{R}\times \mathbb{R}^{+}} \phi_{\mu,\sigma^2}(\cdot) P_1(d\mu,d\sigma^2), \quad P_1\sim \mathrm{DP}(P_{1,0}, \alpha_1) \\
+u(\cdot\mid P_2) &= \int_{\mathbb{R}\times \mathbb{R}^{+}} \phi_{\mu,\sigma^2}(\cdot) P_2(d\mu,d\sigma^2), \quad P_2\sim \mathrm{DP}(P_{2,0}, \alpha_2)
 \end{aligned} 
 $$
 
@@ -268,7 +268,7 @@ $$
 For the `pseudopriors` of $\vec{v}_ 2$,
 
 $$
-\breve{\alpha} = \frac{1}{Q}\sum_{q=1}^{Q}\mathrm{argmax}_{a} \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{2,j(q)} \mid 1, a)
+\breve{\alpha} = \frac{1}{Q}\sum_{q=1}^{Q} \mathrm{argmax}_ {a} \prod_{j=1}^{N-1} \pi_{\mathrm{Beta}}(v_{2,j(q)} \mid 1, a)
 $$
 
 For the `pseudopriors` of $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$,
