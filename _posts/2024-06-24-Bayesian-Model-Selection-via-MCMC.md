@@ -274,7 +274,7 @@ $$
 For the `pseudopriors` of $(\vec{\mu}_ 2, \vec{\sigma}_ 2 ^2)^T$, $\breve{p}_ {2,0}(\cdot)$ is set as a kernel density estimate using the function \it{kde} in the \bold{R} package \it{ks} computed from $(m_1,s_1^2)^T, \ldots, (m_Q,s_Q^2)^T$, where 
 
 $$
-(m_q,s_q^2) \sim u_{(q)}(x \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) = \sum_{j=1}^{N} v_{2,j(q)} \left\lbrace \prod_{l=1}^{j-1} (1-v_{2,l(q)}) \right\rbrace \delta_{\mu_{2,j(q)}, \sigma_{2,j(q)}^2} (x)
+(m_q,s_q^2) \sim u_{(q)}(\cdot \mid \vec{v}_ 2, \vec{\mu}_ 2, \vec{\sigma}_ 2 ^2) = \sum_{j=1}^{N} v_{2,j(q)} \left\lbrace \prod_{l=1}^{j-1} (1-v_{2,l(q)}) \right\rbrace \delta_{\mu_{2,j(q)}, \sigma_{2,j(q)}^2} (\cdot)
 $$
 
 
