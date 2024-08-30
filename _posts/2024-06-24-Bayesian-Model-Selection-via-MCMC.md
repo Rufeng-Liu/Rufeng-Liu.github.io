@@ -283,7 +283,9 @@ To test the correlation between different components in different simplexes is e
 
 1. Dependent simplexes:
 
-
+$$
+g_1(\cdot\mid k_1,k_2,F)
+$$
 
 
 2. Independent simplexes:
