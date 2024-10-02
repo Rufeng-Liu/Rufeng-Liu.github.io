@@ -193,4 +193,5 @@ The proximal gradient descent algorithm solves the problem by iterating between 
    $$
    \beta_j^{t+1} = \frac{S_{\lambda} \left( \frac{1}{N}\sum_{i=1}^{N} \omega_i x_{ij} (y_i - \sum_{k \neq j} x_{ik} \beta_k^{t}) \right)}{\frac{1}{N}\sum_{i=1}^{N}\omega_i x_{ij}^2}
    $$
+   
 ---
