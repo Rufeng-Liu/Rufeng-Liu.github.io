@@ -187,7 +187,6 @@ The proximal gradient descent algorithm solves the problem by iterating between 
 
    Since $f(\beta_j)$ is continuous, we now conclude that given $|\frac{1}{N}\sum_{i=1}^{N} \omega_i x_{ij} (y_i - \sum_{k \neq j} x_{ik} \beta_k^{t}) | \leq \lambda$, $\hat{\beta}_j = 0$ minimizes $f(\beta_j)$.
    
-   
    In conclusion, the $t+1$ update of $\beta_j$ is, 
    
    $$
