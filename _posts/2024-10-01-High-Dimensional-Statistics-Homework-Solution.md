@@ -56,7 +56,7 @@ _styles: >
 
 ### Problem 1
 
-For a dataset $\lbrace y_i, \boldsymbol{X}_i \rbrace_ {i=1}^ N$ with $y_i \in \mathbb{R}$, $\boldsymbol{X}_i \in \mathbb{R}^p$, define $\boldsymbol{y}=(y_1,\ldots,y_N)$ and $\boldsymbol{X}=(\boldsymbol{X}_1^T,\ldots,\boldsymbol{X}_N^T)^T\in \mathbb{R}^{N\times p}$. Consider the LASSO estimator
+For a dataset $\lbrace y_i, \boldsymbol{X}_i \rbrace_ {i=1}^ N$ with $y_i \in \mathbb{R}$, $\boldsymbol{X} _i \in \mathbb{R}^ p$, define $\boldsymbol{y}=(y_1,\ldots,y_N)$ and $\boldsymbol{X}=(\boldsymbol{X}_1^T,\ldots,\boldsymbol{X}_N^T)^T\in \mathbb{R}^{N\times p}$. Consider the LASSO estimator
 
 $$
 \hat{\boldsymbol{\beta}} = \arg \min_{\boldsymbol{\beta} \in \mathbb{R}^p} \frac{1}{2N} \sum_{i=1}^{N} \omega_i (y_i - \boldsymbol{X}_i^T \boldsymbol{\beta})^2 + \lambda \|\boldsymbol{\beta}\|_1,
