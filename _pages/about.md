@@ -22,5 +22,5 @@ I am a PhD candidate in the [Department of Statistics](https://stat.fsu.edu/) at
 
 My advisor is Professor [Andrés Felipe Barrientos](https://anfebar.github.io/). 
 
-My research interests include nonparametric Bayesian inference, Bayesian variable/model selection, and statistical computing.
+My research interests include Bayesian Methodology, Nonparametric Inference, Model/Variable Selection, Spatio-temporal Statistics, Variational Inference, Statistical Computing, Bayesian Optimization, and Bayesian Machine/Deep Learning.
 
